@@ -44,7 +44,7 @@
 
 
 
-- _Step 1_: We want to find Michelangelo's IRI. To do so, we run a SPARQL query based on the artwork _Tondo Doni_ that we are sure was authored by Michelangelo.
+- _Step 1_: We want to find Michelangelo's IRI. To do so, we run a SPARQL query based on the artwork _Tondo Doni_ that we are sure was authored by Michelangelo. / We have to find the IRI of Andrea Mantegna, so we decided to run a SPARQL query based on one of his most famous artworks. In order to find one we used Large Language Models, such as Gemini and ChatGPT. With the zero-prompting technique we asked Gemini what artworks there were out of the italian region Lombardy, but the results were not entirely true. He stated that the "Compianto sul cristo morto" was located in Paris, even if it is in Milan.
 
 
 QUERY 1
