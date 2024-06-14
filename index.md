@@ -14,7 +14,8 @@ Within the "Information Technology Skills" course at the University of Bologna, 
 - [Cristo morto, Andrea Mantegna](cristomorto.md)
 
 <div style="margin-top: 18px;"></div>
--
+
+- [San Giorgio e il drago, Andrea Mantegna](sangiorgioeildrago.md)
 
 <h3 style="color: blue;">Topic</h3> 
 
