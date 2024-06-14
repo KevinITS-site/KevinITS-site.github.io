@@ -9,7 +9,7 @@ layout: default
 
 <h3 style="color: blue;">Context</h3>
 
-Within the "Information Technology Skills" course at the University of Bologna, we worked on a project to enrich the ArCo knowledge graph of the Italian Ministry of Cultural Heritage. On the homepage of our website you can find our topic, the goals we wanted to achieve with this project, the methodology we applied and who we are. In order to get more detailled information about our project click [here](another-page.md) or directly choose the artwork you're interested in:
+Within the "Information Technology Skills" course at the University of Bologna, we worked on a project to enrich the ArCo knowledge graph of the Italian Ministry of Cultural Heritage. On the homepage of our website you can find our topic, the goals we wanted to achieve with this project, the methodology we applied and who we are. In order to get more detailled information about our project click [here](another-page.md) for the full project report or directly choose the artwork you're interested in:
 
 - [Cristo morto, Andrea Mantegna](cristomorto.md)
 
@@ -19,7 +19,7 @@ Within the "Information Technology Skills" course at the University of Bologna, 
 
 <h3 style="color: blue;">Topic</h3> 
 
-Michelangelo's artworks: an in-depth analysis of _Pietà (stampa)_ and _David-Apollo_ 
+Andrea Mantegna, a Pioneer of Perspective: _Cristo morto (stampa)_ and _San Giorgio e il drago_ 
 
 <h3 style="color: blue;">Goal</h3>
 
