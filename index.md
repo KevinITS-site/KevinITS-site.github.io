@@ -9,12 +9,12 @@ layout: default
 
 <h3 style="color: blue;">Context</h3>
 
-Within the "Information Technology Skills" course at the University of Bologna, we worked on a project to enrich the ArCo knowledge graph of the Italian Ministry of Cultural Heritage. On the homepage of our website you can find our topic, the goals we wanted to achieve with this project, the methodology we applied and who we are. In order to get more detailled information about our project click [here](another-page.md) or choose the artworks you're interested in:
+Within the "Information Technology Skills" course at the University of Bologna, we worked on a project to enrich the ArCo knowledge graph of the Italian Ministry of Cultural Heritage. On the homepage of our website you can find our topic, the goals we wanted to achieve with this project, the methodology we applied and who we are. In order to get more detailled information about our project click [here](another-page.md) or directly choose the artwork you're interested in:
 
-[Cristo morto, Andrea Mantegna](cristomorto.md)
+- [Cristo morto, Andrea Mantegna](cristomorto.md)
 
 <div style="margin-top: 18px;"></div>
---
+-
 
 <h3 style="color: blue;">Topic</h3> 
 
@@ -37,6 +37,10 @@ We want to identify and explore artworks related to Andrea Mantegna in the ArCo 
 <h3 style="color: blue;">Team</h3>
 
 Claudia Caterino, Francesca Melgari, Alice Pierassa, Elisa Sadun & Kevin Spirk 
+
+<h3 style="color: blue;">Results</h3>
+
+In order to directly discover the RDF triples we propose to enrich the ArCo knowledge graph click [here](another-page.md) .
   
 <div style="margin-top: 40px;"></div> 
 
