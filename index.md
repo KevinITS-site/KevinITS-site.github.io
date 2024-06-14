@@ -32,7 +32,7 @@ We want to identify and explore artworks related to Andrea Mantegna in the ArCo 
 - Collecting information about the chosen artworks with Large Language Models such as ChatGPT, Gemini, Llama and Mixtral that could be used in order to enrich the ArCo knowledge graph.
 - Questioning these LLM's with different prompting techniques such as Zero-shot, Few-Shot, Chain-of-Thought and Generated Knowledge Prompting.
 - Creating triples for a potential enrichment of the ArCo knowledge graph.
-- Building a website with GITHUB: link
+- Building a website with GITHUB: <https://github.com>
 
 
 <h3 style="color: blue;">Team</h3>
