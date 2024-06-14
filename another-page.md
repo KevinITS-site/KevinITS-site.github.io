@@ -1,6 +1,6 @@
 
 <div class="topnav">
-  <a class="active" href="https://KevinITS-site.github.io/project/">Home</a>
+  <a class="active" href="https://kevinits-site.github.io">
   <a class="active" href="https://KevinITS-site.github.io/project/page2.html">Final step</a>
 </div>
 
