@@ -18,7 +18,7 @@
 <a name="mm-anchor"></a>
 <h4 style="color:green ;">1. Introduction</h4>
 
-blabla introduzione
+In order to enrich the knowledge graph of the ArCo ontology, we first want to find out which artworks by Andrea Mantegna present  uncomplete information. To do so we 
 
 <a name="custom-anchor"></a>
 <h4 style="color:green ;">2. Cultural Property "Pietà (stampa)", Michelangelo Buonarroti & Halm Peter Von (sec. XIX)</h4>
