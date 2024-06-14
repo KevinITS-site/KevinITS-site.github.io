@@ -1,13 +1,11 @@
 ---
 layout: default
 ---
-<h2 style="color: blue;">THE PROJECT</h2>
+<h2 style="color: blue;">ABOUT THE PROJECT</h2>
 
 <h3 style="color: blue;">Context</h3>
 
-ArCo: the knowledge graph of the Italian Cultural Heritage
-
-Large Language Models: Gemini and ChatGPT
+Within the "Information Technology Skills" course at the University of Bologna, we worked on a project to enrich the ArCo knowledge graph of the Italian Ministry of Cultural Heritage.
 
 <h3 style="color: blue;">Topic</h3> 
 
