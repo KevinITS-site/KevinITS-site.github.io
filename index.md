@@ -19,8 +19,8 @@ We want to identify and explore artworks related to Andrea Mantegna in the ArCo 
 
 <h3 style="color: blue;">Methodology</h3>
 
-- Exploring the ArCo ontologies and knowledge graph: link
-- Exploring the ArCo SPARQL endpoint: link
+- Exploring the ArCo ontologies and knowledge graph: <http://wit.istc.cnr.it/arco/>
+- Exploring the ArCo SPARQL endpoint: <https://dati.cultura.gov.it/sparql>
 - Collecting information about the chosen artworks with Large Language Models such as ChatGPT, Gemini, Llama and Mixtral.
 - Questioning these LLM's with different prompting techniques such as Zero-shot, Few-Shot, Chain-of-Thought and Generated Knowledge Prompting.
 - Building a website with GITHUB: link
