@@ -12,6 +12,8 @@ layout: default
 Within the "Information Technology Skills" course at the University of Bologna, we worked on a project to enrich the ArCo knowledge graph of the Italian Ministry of Cultural Heritage. On the homepage of our website you can find our topic, the goals we wanted to achieve with this project, the methodology we applied and who we are. In order to get more detailled information about our project click [here](another-page.md) or choose the artworks you're interested in:
 
 [Cristo morto, Andrea Mantegna](cristomorto.md)
+
+<div style="margin-top: 18px;"></div>
 --
 
 <h3 style="color: blue;">Topic</h3> 
