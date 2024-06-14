@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+
+![thumbnail](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/0aea0f8e-2834-4747-a4cb-6e68bcf779c8)
+
+
 <h2 style="color: blue;">ABOUT THE PROJECT</h2>
 
 <h3 style="color: blue;">Context</h3>
