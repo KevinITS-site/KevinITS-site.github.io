@@ -16,24 +16,9 @@
 
 
 <a name="mm-anchor"></a>
-<h4 style="color:green ;">1. Methodology</h4>
+<h4 style="color:green ;">1. Introduction</h4>
 
-
-- Making hypotheses
-
-- Looking for the data in the ArCo ontologies documentation: http://wit.istc.cnr.it/arco/  
-
-- Realizing queries using the ArCo SPARQL endpoint: https://dati.cultura.gov.it/sparql  
-
-- Verifying if the retrieved data could actually back up our hypotheses or not 
-
-- Using LLMs 
-
-- Creating RDF triples that could be addeded to the knowledge graph
-
-
-
-
+blabla introduzione
 
 <a name="custom-anchor"></a>
 <h4 style="color:green ;">2. Cultural Property "Pietà (stampa)", Michelangelo Buonarroti & Halm Peter Von (sec. XIX)</h4>
