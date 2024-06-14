@@ -42,19 +42,8 @@ Claudia Caterino, Francesca Melgari, Alice Pierassa, Elisa Sadun & Kevin Spirk
 <h3 style="color: blue;">Results</h3>
 
 In order to directly discover the RDF triples we propose to enrich the ArCo knowledge graph click [here](triples.md) .
-  
-<div style="margin-top: 40px;"></div> 
 
-  <!-- Header -->
-  <header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>Our project</b></h1>
-  </header>
-
-[REPORT](another-page.md)
-
-<div style="margin-top: 20px;"></div> 
-
-[FINAL STEP](page2.md) 
+<div style="margin-top: 20px;"></div>  
 
 
 
