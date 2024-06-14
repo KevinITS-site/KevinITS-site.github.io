@@ -124,19 +124,6 @@ a {
   }
 }
 
-.page-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(camera degli sposi.jpeg');
-  background-size: cover
-  background-position: center;
-  z-index: -1;
-}
-
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -388,4 +375,17 @@ a {
 
 .site-footer-credits {
   color: $blockquote-text-color;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('camera degli sposi.jpeg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
