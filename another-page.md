@@ -50,6 +50,7 @@ Although we are not satisfied with the result, we are keeping this first IRI ret
 https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b (a)
 At this point, we try to modify the target of our query by making it more specific. This is why we decide to build a query in order to search for one specific famous painting by Mantegna, the "Cristo Morto". We include the full title of the painting in our query , knowing that, since this subject is very popular in the history of art, it could give us too many results. 
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
 PREFIX agent: <https://w3id.org/arco/resource/Agent/> <br>
@@ -60,50 +61,58 @@ WHERE { <br>
 rdfs:label ?l . <br>
 FILTER(REGEX(?l, "cristo morto nel sepolcro e tre dolenti", "i")) <br>
 } <br>
-
+</p>
+  
 This query successfully returns us two results:
 
 ![bild 2](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/2bc78b9b-7303-4d6a-b691-6572535e49d9)
 
 After querying for the properties and values associated with both entities in the ArCo dataset, and checking the property cd:hasAuthor, we are able to identify two other IRIs for the author Andrea Mantegna.
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
 SELECT ?property ?value <br>
 WHERE { <br>
   <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> ?property ?value . <br>
 } <br>
+</p>
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
 SELECT ?property ?value <br>
 WHERE { <br>
 <https://w3id.org/arco/resource/Lombardia/HistoricOrArtisticProperty/RL480-00068_R03> ?property ?value . <br>
 } <br>
+</p>
 
 FIRST IRI: https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3 (b) <br>
 SECOND IRI: https://w3id.org/arco/resource/Lombardia/Agent/5fd98076b40717d5f8162f1580228220 (c)
 
 At first glance, we notice that the main difference between the two lies in the fact that the second IRI includes 'Lombardia’. Therefore, our suspicion is that the second IRI places the Agent Mantegna specifically within the context of the region Lombardy. This could imply that within the ArCo dataset, there is specific attributes related to Mantegna that pertain to Lombardy, such as artworks located in that region. To confirm this hypothesis, we compare the number of cultural properties authored by the first Agent with the number of properties authored by the second one: 
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
 PREFIX Agent: <https://w3id.org/arco/resource/Agent/> <br>
 SELECT (COUNT(?object) AS ?n) <br>
 WHERE { agent:f006a78cf246d5b7d73539da8eac78e3 a-cd:isAuthorOf ?object . <br>
  }  <br>
- 
 --> 82
-
+ </p>
+  
+<p style="background-color: Azure; padding: 5px;">
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
 PREFIX Agent: <https://w3id.org/arco/resource/Agent/> <br>
 SELECT (COUNT(?object) AS ?n) <br>
 WHERE { agent:5fd98076b40717d5f8162f1580228220 a-cd:isAuthorOf ?object . <br>
  } 
- 
 --> 7
-
+ </p>
+  
 The lower count (n. 7) of cultural properties authored by the second Agent, as compared to the general count (n. 82), confirms that this IRI focuses on a specific, more restricted subset of data related to Mantegna, likely within the regional context of Lombardy. 
 
 Based on these considerations, we decide to focus for our project exclusively on the first agent, as it allows for a more general and richer exploration of the works of art. We therefore run the first SPARQL query of the project again, modifying it with the new information obtained:
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
@@ -114,6 +123,7 @@ WHERE { <br>
 rdfs:label ?title ; <br>
 a-cd:hasAuthor agent:f006a78cf246d5b7d73539da8eac78e3 <br>
 } <br>
+</p>
 
 ORDER BY ASC (?title) <br>
 
@@ -134,6 +144,7 @@ https://w3id.org/arco/ontology/context-description/hasRelatedWork
 
 To find out if any of the completed artworks authored by Mantegna is linked to the preparatory works through this property, or vice versa, if the preparatory works are related to the completed versions, we use the UNION clause in our query:
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX arco:<https://w3id.org/arco/ontology/arco/> <br>
 PREFIX a-cd:<https://w3id.org/arco/ontology/context-description/> <br>
 PREFIX agent: <https://w3id.org/arco/resource/Agent/> <br>
@@ -147,16 +158,19 @@ UNION <br>
 a-cd:hasAuthor agent:f006a78cf246d5b7d73539da8eac78e3 . <br>
 ?preparatoryWork a-cd:hasAuthor agent:12f2edbd230290b2abfb6c867ecef84b . } <br>
 } <br>
-
+</p>
+  
 Since we obtain no results, we use ASK to test if the property a-cd:hasRelatedWork is present at all within the ArCo ontology:
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
 ASK <br>
 { <br>
   ?s a-cd:isRelatedWork ?o . <br>
 } <br>
-
+</p>
+  
 The query result is false, indicating that no triple using the a-cd:isWorkRelatedTo property exists within the ArCo KG. This suggests that introducing such triples in the context of Mantegna’s artwork might be relevant for representing these specific relationships between them. As an example, we propose two triples which connect the preparatory work (previously found among the list generated by our first query) whose subject is “Cristo Morto”, with the final painting (https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068).
 
 PROPOSITION OF NEW TRIPLES:
