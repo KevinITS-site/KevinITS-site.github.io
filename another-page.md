@@ -20,9 +20,26 @@
 <a name="mm-anchor"></a>
 <h4 style="color:blue ;">1. Introduction</h4>
 
-In order to enrich the knowledge graph of the ArCo ontology, we first want to find out which artworks by Andrea Mantegna present  uncomplete information. To do so we 
+The goal of our project was to explore the artworks of the Italian Renaissance painter Andrea Mantegna within ArCo’s knowledge graph and discover potential ways to enrich the KG through the creation of new RDF triples. To do this, we decided to conduct a general analysis of the artist’s paintings, trying to find out which ones presented missing or incomplete information. 
 
 <h4 style="color:blue ; id="target-section">2. Andrea Mantegna</h4>
+
+Exploring ArCo
+
+Our first step is looking for all the cultural properties authored by Andrea Mantegna. However, since we don’t have an IRI for the author yet, we build a query for all the strings whose value contains the words “Andrea Mantegna”:
+
+PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
+PREFIX agent: <https://w3id.org/arco/resource/Agent/>
+SELECT DISTINCT ?culturalProperty ?title
+WHERE {
+?culturalProperty a-cd:hasAuthor ?author ;
+rdfs:label ?title .
+?author rdfs:label ?authorName
+FILTER(?authorName = "Andrea Mantegna")
+}
+
+The first thing we notice from the results of our query is that most of the entities retrieved are of class “PreparatoryWork”. Moreover, none of these cultural properties appears to be one of Mantegna’s famous artworks, which means that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
 <a name="custom-anchor"></a>
 <h4 style="color:blue ;">3. Cultural Property "Pietà (stampa)", Michelangelo Buonarroti & Halm Peter Von (sec. XIX)</h4>
