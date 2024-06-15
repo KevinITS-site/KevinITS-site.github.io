@@ -1,9 +1,6 @@
 
 <div class="topnav">
   <a class="active" href="https://kevinits-site.github.io">Home</a>
-  <a class="active" href="https://kevinits-site.github.io">
-  <span class="bordered-word">Home</span>
-</a>
   <a class="active" href="https://kevinits-site.github.io/triples.html">Results</a>
 </div>
 
@@ -27,13 +24,11 @@ The goal of our project was to explore the artworks of the Italian Renaissance p
 <a name="target-section"></a>
 <h4 style="color:blue ;">2. Andrea Mantegna</h4>
 
-<h4 style="color:blue ; id="target-section">2. Andrea Mantegna</h4>
-
 Exploring ArCo
 
 Our first step is looking for all the cultural properties authored by Andrea Mantegna. However, since we don’t have an IRI for the author yet, we build a query for all the strings whose value contains the words “Andrea Mantegna”:
 
-<p style="background-color: yellow; padding: 5px;">
+<p style="background-color: Azure; padding: 5px;">
   PREFIX arco: <https://w3id.org/arco/ontology/arco/>
   PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
   PREFIX agent: <https://w3id.org/arco/resource/Agent/>
