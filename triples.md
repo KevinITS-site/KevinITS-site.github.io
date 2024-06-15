@@ -1,7 +1,7 @@
 These are the triples we propose to enrich the ArCo knowledge graph:
 
 <a name="mm-anchor"></a>
-<h3 style="color:blue ;">Andrea Mantegna</h3>
+<h3 style="color:black ;">Andrea Mantegna</h3>
 
 <strong> 1. Triple </strong>
 
@@ -10,7 +10,7 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 • <https://w3id.org/arco/ontology/context-description/PreparatoryWork> --> Object
 
 <a name="mm-anchor"></a>
-<h3 style="color:blue ;">Cristo morto</h3>
+<h3 style="color:black ;">Cristo morto</h3>
 
 <strong> 2. Triple </strong>
 
@@ -44,7 +44,7 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 
 
 <a name="mm-anchor"></a>
-<h3 style="color:blue ;">San Giorgio e il drago</h3>
+<h3 style="color:black ;">San Giorgio e il drago</h3>
 
 <strong> 7. Triple </strong>
 
