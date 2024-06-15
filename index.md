@@ -19,7 +19,7 @@ Within the "Information Technology Skills" course at the University of Bologna, 
 
 <h3 style="color: blue;">Topic</h3> 
 
-Andrea Mantegna, a Pioneer of Perspective: _Cristo morto_ and _San Giorgio e il drago_ 
+Andrea Mantegna, a Pioneer of Perspective: Discover the _Cristo morto_ and _San Giorgio e il drago_ 
 
 <h3 style="color: blue;">Goal</h3>
 
