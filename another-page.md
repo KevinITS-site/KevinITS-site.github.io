@@ -100,7 +100,7 @@ PREFIX Agent: <https://w3id.org/arco/resource/Agent/> <br>
 SELECT (COUNT(?object) AS ?n) <br>
 WHERE { agent:f006a78cf246d5b7d73539da8eac78e3 a-cd:isAuthorOf ?object . <br>
  }  <br>
---> 82
+--> 82 results
  </p>
   
 <p style="background-color: Azure; padding: 5px;">
@@ -108,8 +108,8 @@ PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
 PREFIX Agent: <https://w3id.org/arco/resource/Agent/> <br>
 SELECT (COUNT(?object) AS ?n) <br>
 WHERE { agent:5fd98076b40717d5f8162f1580228220 a-cd:isAuthorOf ?object . <br>
- } 
---> 7
+ } <br>
+--> 7 results
  </p>
   
 The lower count (n. 7) of cultural properties authored by the second Agent, as compared to the general count (n. 82), confirms that this IRI focuses on a specific, more restricted subset of data related to Mantegna, likely within the regional context of Lombardy. 
@@ -127,10 +127,9 @@ WHERE { <br>
 rdfs:label ?title ; <br>
 a-cd:hasAuthor agent:f006a78cf246d5b7d73539da8eac78e3 <br>
 } <br>
-</p>
-
 ORDER BY ASC (?title) <br>
-
+</p>
+  
 As expected, this time the query gives us a many more cultural properties, including Mantegna’ most famous artworks. Moreover, all the cultural properties retrieved belong to the class HistoricorArtisticProperty, and not the previously mentioned class PreparatoryWork:
 
 ![bild 3](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/b9a32e8a-3442-4487-b3aa-c6e6cf346b30)
@@ -142,7 +141,7 @@ This might imply that the very first Agent (a) we have retrieved is the one asso
 
 Following these considerations, we believe it could also be useful to link the preparatory works to their final versions or vice versa. Our question is: are there any properties in ArCo that define this type of relationship? To answer it, we research in ArCo's Documentation to identify related properties. Such a property might be found in the Context Description module of the ArCo ontology. We find out that, as a matter of fact, this object property already exists:
 
-https://w3id.org/arco/ontology/context-description/hasRelatedWork
+<https://w3id.org/arco/ontology/context-description/hasRelatedWork>
 
 ![bild 4](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/086aeb49-963b-467c-8dc5-3da916db53a3)
 
