@@ -359,10 +359,8 @@ WHERE { <br>
 
 We found two different IRIs, one referring to the Museo Civico of Palazzo Te and the other simply referring to Palazzo Te: 
 
-MUSEO CIVICO: https://w3id.org/arco/resource/Lombardia/CulturalInstituteOrSite/df850573204fac1a1938c8ecbd703b30
-
-PALAZZO TE: 
-https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06 
+1. <a href= "https://w3id.org/arco/resource/Lombardia/CulturalInstituteOrSite/df850573204fac1a1938c8ecbd703b30"> IRI Museo Civico</a> <br>
+2. <a href= "https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06"> IRI Palazzo Te</a>
 
 Considering that we were dealing with an event, we opted for the IRI of Palazzo Te, estimating that it indicates the site in a more general sense and could hence produce a wider range of results. To find the right triple, we questioned Chat GPT again, and we also included another LLM, that is, Gemini. This time, we employed a few-shot prompting technique and we asked:
 
