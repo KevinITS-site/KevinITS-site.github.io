@@ -35,7 +35,8 @@ Our first step is looking for all the cultural properties authored by Andrea Man
 
   SELECT DISTINCT ?culturalProperty ?title <br>
   WHERE { <br>
-    ?culturalProperty a-cd:hasAuthor ?author ;  rdfs:label ?title . <br>
+    ?culturalProperty a-cd:hasAuthor ?author ; <br>
+    rdfs:label ?title . <br>
     ?author rdfs:label ?authorName <br>
     FILTER(?authorName = "Andrea Mantegna") <br>
   } <br>
