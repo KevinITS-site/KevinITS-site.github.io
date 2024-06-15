@@ -409,7 +409,7 @@ Site:Palazzo Te https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71
 <div style="margin-top: 80px;"></div> 
 
 <a name="c-anchor"></a>
-<h4 style="color:green ;">4. San Giorgio e il drago, Andrea Mantegna</h4>
+<h4 style="color:blue; font-weight: bold;">4. San Giorgio e il drago, Andrea Mantegna</h4>
 
 <div style= "text-align: center;">
 <img src="https://github.com/capa46/project/assets/170109035/9e13c0ed-731d-459a-b603-5eba791f84be" width="200" height="400">
