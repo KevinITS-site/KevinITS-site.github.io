@@ -184,8 +184,8 @@ a-cd:isRelatedWork --> Predicate <br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object <br>
 
 
-<a name="custom-anchor"></a>
-<h4 style="color:blue ;">3. Cristo Morto, Andrea Mantegna</h4>
+<div id="specific-section"><a name="custom-anchor"></a>
+<h4 style="color:blue ;">3. Cristo Morto, Andrea Mantegna</h4></div>
 
 <div style= "text-align: center;">
 <img src="https://github.com/capa46/project/assets/170109035/e2683111-a558-49de-8821-497a859a3710" width="200" height="250">
