@@ -7,21 +7,25 @@
 
 <h3 style="color:blue ;">INDEX</h3>
 
-1. [Methodology](#mm-anchor)
+1. [Introduction](#mm-anchor)
+
+2. [Andrea Mantegna](#target-section)
    
-2. [Cultural Property _Pietà (stampa)_, Michelangelo Buonarroti & Halm Peter Von (sec. XIX)](#custom-anchor)
+3. [Cristo Morto, Andrea Mantegna](#custom-anchor)
    
-3. [Cultural Property _David-Apollo_, Michelangelo Buonarroti (sec. XVI)](#c-anchor)
+4. [San Giorgio e il drago, Andrea Mantegna](#c-anchor)
    <div style="margin-top: 80px;"></div> 
 
 
 <a name="mm-anchor"></a>
-<h4 style="color:green ;">1. Introduction</h4>
+<h4 style="color:blue ;">1. Introduction</h4>
 
 In order to enrich the knowledge graph of the ArCo ontology, we first want to find out which artworks by Andrea Mantegna present  uncomplete information. To do so we 
 
+<h4 style="color:blue ; id="target-section">2. Andrea Mantegna</h4>
+
 <a name="custom-anchor"></a>
-<h4 style="color:green ;">2. Cultural Property "Pietà (stampa)", Michelangelo Buonarroti & Halm Peter Von (sec. XIX)</h4>
+<h4 style="color:blue ;">3. Cultural Property "Pietà (stampa)", Michelangelo Buonarroti & Halm Peter Von (sec. XIX)</h4>
 
 <div style= "text-align: center;">
 <img src="https://github.com/capa46/project/assets/170109035/e2683111-a558-49de-8821-497a859a3710" width="200" height="250">
