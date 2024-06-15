@@ -24,6 +24,10 @@ The goal of our project was to explore the artworks of the Italian Renaissance p
 <a name="target-section"></a>
 <h4 style="color:blue; font-weight: bold">2. Andrea Mantegna</h4>
 
+<div style="text-align: center;">
+<img src="![mantegna](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/31799097-ce39-476e-a835-0705c342d052)">
+</div>
+
 Exploring ArCo
 
 Our first step is looking for all the cultural properties authored by Andrea Mantegna. However, since we don’t have an IRI for the author yet, we build a query for all the strings whose value contains the words “Andrea Mantegna”:
