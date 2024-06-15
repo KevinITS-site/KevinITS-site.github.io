@@ -175,131 +175,12 @@ https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object 
 
 
 <a name="custom-anchor"></a>
-<h4 style="color:blue ;">3. Cultural Property "Pietà (stampa)", Michelangelo Buonarroti & Halm Peter Von (sec. XIX)</h4>
+<h4 style="color:blue ;">3. Cristo Morto, Andrea Mantegna</h4>
 
 <div style= "text-align: center;">
 <img src="https://github.com/capa46/project/assets/170109035/e2683111-a558-49de-8821-497a859a3710" width="200" height="250">
 </div>
 
-
-
-- _Step 1_: We want to find Michelangelo's IRI. To do so, we run a SPARQL query based on the artwork _Tondo Doni_ that we are sure was authored by Michelangelo. / We have to find the IRI of Andrea Mantegna, so we decided to run a SPARQL query based on one of his most famous artworks. In order to find one we used Large Language Models, such as Gemini and ChatGPT. With the zero-prompting technique we asked Gemini what artworks there were out of the italian region Lombardy, but the results were not entirely true. He stated that the "Compianto sul cristo morto" was located in Paris, even if it is in Milan.
-
-
-QUERY 1
-
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
-
-PREFIX agent: <https://w3id.org/arco/resource/Agent/>
-
-
-SELECT DISTINCT ?cp
-
-WHERE {
-
-?cp a arco:HistoricOrArtisticProperty ;
-
-rdfs:label ?l .
-
-FILTER(REGEX(?l, "tondo doni", "i"))
-
-}
-
-LIMIT 20
-
-
-
-Result:
-<a href= "https://w3id.org/arco/resource/Agent/56d8ee32618291c12ae4f357db49c221">IRI Michelangelo</a>
-
-
-
-- _Step 2_: We are curious to know more about Michelangelo's artwork _Pietà_. We therefore explore ArCo by using the following query:
-
-
-QUERY 2 
-
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
-
-PREFIX agent: <https://w3id.org/arco/resource/Agent/>
-
-
-SELECT DISTINCT ?culturalProperty
-
-WHERE {
-
-?culturalProperty a arco:HistoricOrArtisticProperty ;
-
-a-cd:hasAuthor agent:56d8ee32618291c12ae4f357db49c221 ;
-
-rdfs:label ?l .
-
-FILTER(REGEX(?l, "pietà", "i"))
-
-}
-
-
-
-We employ the keyword **DISTINCT** to eliminate duplicates and by doing so we get 7 results. Among them, we select the artwork _Pietà, Pietà (stampa) di Buonarroti Michelangelo, Halm Peter Von (sec. XIX)_, from which we retrieve the cultural property IRI and the 2nd author's (Halm Peter Von) IRI.
-
-
-Results:
-
-<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100214952">IRI Pietà (stampa)</a>
-
-<a href= "https://w3id.org/arco/resource/Agent/8603b17b6451202a8d27734812dae423">IRI Halm Peter Von</a>
-
-
-- _Step 3_
-
-
-**Prompting techniques:**
-We use the LLMs Gemini and ChatGPT in order to enrich the information regarding the location of the artwork _Pietà (stampa)_:
-
--ChatGPT  
-
-  <img src="https://github.com/capa46/project/assets/170355893/2dd708ce-1138-491c-bb66-7a9f1992b720" width="800" height="400">
-
--Gemini
-
-  <img src="https://github.com/capa46/project/assets/170109035/4c217fb1-e381-426e-b0ac-44e87eac773e" width="800" height="400">
-
-
-
-We use the **zero-shot prompting technique** starting from the question _Could you please tell me the exact place in which the stamp 'Pietà, Pietà (stampa) di Buonarroti Michelangelo, Halm Peter Von (sec. XIX)' is kept?_.
-
-
-
-**Results and analysis:**
-ChatGPT provides us with a wrong answer, while Gemini answers correctly: _The record specifies that the print "Pietà, Pietà (stampa) di Buonarroti Michelangelo, Halm Peter Von (sec. XIX)" is kept at the Istituto di Belle Arti (Institute of Fine Arts) located on Via Duomo, 17, Vercelli (VC), Italy [source:catalogo.beniculturali.it]_.
-
-
-- _Step 4_
-
-**Prompting techniques:**
-We want to transform the new-found information into RDF format to build a triple and to do so we apply the **chain of thought prompting technique**, both in Gemini and ChatGPT.
-
-Chain of thought prompt:
-
-_The Doni Tondo or Doni Madonna is kept in the Uffizi in Florence, Italy._
-
-_RDF format: IRI Doni Tondo = https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900287181_ 
-
-_is kept in = a-loc:hasCulturalInstituteOrSite = https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite_ 
-
-_IRI Galleria degli Uffizi = https://w3id.org/arco/resource/CulturalInstituteOrSite/68ea75fb6946df92f9c6a6fa98a5d1f3_ 
-
-_HistoricOrArtisticProperty:0900287181 a-loc:hasCulturalInstituteOrSite CulturalInstituteOrSite:68ea75fb6946df92f9c6a6fa98a5d1f3_
-
-_Based on the previous example that I gave you, could you transform the following sentence “The record specifies that the print "Pietà, Pietà (stampa) di Buonarroti Michelangelo, Halm Peter Von (sec. XIX) is kept at the Istituto di Belle Arti (Institute of Fine Arts) located on Via Duomo, 17, Vercelli (VC), Italy” into RDF format using the ArCo ontology?_
 
 
 **Results and analysis:**
@@ -377,42 +258,6 @@ This RDF triple would link Michelangelo and Halm Peter Von's artwork to its loca
 </div>
 
 
-- _Step 1_
-
-We now want to find the artwork _David_ authored by Michelangelo Buonarroti using the following query:
-
-
-
-QUERY 4
-
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
-
-PREFIX agent: <https://w3id.org/arco/resource/Agent/>
-
-
-SELECT DISTINCT ?culturalProperty
-
-WHERE {
-
-?culturalProperty a arco:HistoricOrArtisticProperty ;
-
-a-cd:hasAuthor agent:56d8ee32618291c12ae4f357db49c221 ;
-
-rdfs:label ?l .
-
-FILTER(REGEX(?l, "david", "i"))
-
-}
-
-LIMIT 10
-
-
-
-
 Among the results, we choose the _David-Apollo_ statue with <a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900286607">this IRI</a>.
 
 After analysing the data, we focus our attention on the property _a-cd:hasCommission_ that refers to _Committenza 1 del bene 0900286607_ with <a href= "https://w3id.org/arco/resource/Commission/0900286607-1">this IRI</a>.
@@ -470,45 +315,6 @@ We observe that Gemini replies correctly to the two last questions phrased in a 
 - _Step 3_
 
 We are now interested in finding out in which events the cultural property _David-Apollo_ was involved. To do so, we use the following query:
-
-
-
-QUERY 5 
-
-PREFIX l0: <https://w3id.org/italia/onto/l0/>
-
-PREFIX cis: <http://dati.beniculturali.it/cis/>
-
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
-
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-
-PREFIX agent: <https://w3id.org/arco/resource/Agent/>
-
-
-SELECT DISTINCT ?event ?eventName ?culturalProperty 
-
-WHERE{
-
-  ?event cis:involvesCulturalEntity ?culturalProperty ;
-  
-  l0:name ?eventName .
-  
-  ?culturalProperty a-cd:hasAuthor agent:56d8ee32618291c12ae4f357db49c221 ;
-  
-   a arco:HistoricOrArtisticProperty ;
-   
-   rdfs:label ?l .
-                             
-FILTER(REGEX(?l, "david-apollo", "i"))
-
-}
-
-ORDER BY DESC(?eventName)
-
-
 
 
 
@@ -582,29 +388,6 @@ Result: <a href= "https://w3id.org/arco/resource/Lombardia/Subject/172522ec1028a
 
 
 
-QUERY 7
-
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
-
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-
-SELECT DISTINCT ?sub ?slabel
-
-
-WHERE
-
-{
-
-?cp a-cd:hasSubject ?sub .
-
-?sub a a-cd:Subject ;
-
-rdfs:label ?slabel .
-
-FILTER(REGEX(?slabel,"apollo", "i"))
-
-}
-
 ORDER BY ASC (?sub)
 
 Result: <a href= "https://w3id.org/arco/resource/Lombardia/Subject/31f2385ba9cc65dba7ccb9aa5c5b7600">IRI of Apollo</a>
@@ -629,33 +412,6 @@ https://w3id.org/arco/resource/Lombardia/Subject/31f2385ba9cc65dba7ccb9aa5c5b760
 
  Are there other artworks with the same problem? To find it out, we use the keyword **OPTIONAL** 
  that enables to retrieve cultural properties with the subject _David_ and eventually _Apollo_. 
-
-
-QUERY 8
-
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
-
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-
-SELECT DISTINCT ?sub ?label
-
-WHERE
-
-{
-
-?cp a-cd:hasSubject ?sub .
-
-?sub a a-cd:Subject ;
-
-rdfs:label ?label .
-
-FILTER(REGEX(?label,”david”, “i”))
-
-OPTIONAL { ?culturalProperty a-cd:subject “apollo”, “i”} 
-
-}
-
-LIMIT 100
 
 
 
