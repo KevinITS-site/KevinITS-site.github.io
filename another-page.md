@@ -5,7 +5,7 @@
 </div>
 
 
-<h3 style="color:blue ;">CONTENT</h3>
+<h3 style="color:blue; font-size: 2em;">CONTENT</h3>
 
 1. [Introduction](#mm-anchor)
 
@@ -14,15 +14,15 @@
 3. [Cristo Morto, Andrea Mantegna](#custom-anchor)
    
 4. [San Giorgio e il drago, Andrea Mantegna](#c-anchor)
-   <div style="margin-top: 80px;"></div> 
+   <div style="margin-top: 60px;"></div> 
 
 <a name="mm-anchor"></a>
-<h4 style="color:blue ;">1. Introduction</h4>
+<h4 style="color:blue; font-weight: bold;">1. Introduction</h4>
 
 The goal of our project was to explore the artworks of the Italian Renaissance painter Andrea Mantegna within ArCo’s knowledge graph and discover potential ways to enrich the KG through the creation of new RDF triples. To do this, we decided to conduct a general analysis of the artist’s paintings, trying to find out which ones presented missing or incomplete information. 
 
 <a name="target-section"></a>
-<h4 style="color:blue ;">2. Andrea Mantegna</h4>
+<h4 style="color:blue; font-weight: bold">2. Andrea Mantegna</h4>
 
 Exploring ArCo
 
