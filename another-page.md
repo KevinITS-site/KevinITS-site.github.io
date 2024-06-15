@@ -1,6 +1,9 @@
 
 <div class="topnav">
   <a class="active" href="https://kevinits-site.github.io">Home</a>
+  <a class="active" href="https://kevinits-site.github.io">
+  <span class="bordered-word">Home</span>
+</a>
   <a class="active" href="https://kevinits-site.github.io/triples.html">Results</a>
 </div>
 
@@ -15,7 +18,6 @@
    
 4. [San Giorgio e il drago, Andrea Mantegna](#c-anchor)
    <div style="margin-top: 80px;"></div> 
-
 
 <a name="mm-anchor"></a>
 <h4 style="color:blue ;">1. Introduction</h4>
