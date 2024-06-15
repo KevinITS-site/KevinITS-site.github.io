@@ -49,7 +49,7 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 <strong> 7. Triple </strong>
 
 • <> --> Subject <br>
-
 • a-dd:hasMaterialOrTechnique --> Predicate <br>
-
 • <https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera> --> Object
+
+[HOME](index.md)
