@@ -31,17 +31,18 @@ Exploring ArCo
 
 Our first step is looking for all the cultural properties authored by Andrea Mantegna. However, since we don’t have an IRI for the author yet, we build a query for all the strings whose value contains the words “Andrea Mantegna”:
 
-<p style="background-color: yellow; padding: 5px;">PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
-PREFIX agent: <https://w3id.org/arco/resource/Agent/> <br>
-SELECT DISTINCT ?culturalProperty ?title <br>
-WHERE { <br>
-?culturalProperty a-cd:hasAuthor ?author ; <br>
-rdfs:label ?title . <br>
-?author rdfs:label ?authorName <br>
-FILTER(?authorName = "Andrea Mantegna") <br>
-} <br>.</p
+<p style="background-color: yellow; padding: 5px;">
+  PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+  PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
+  PREFIX agent: <https://w3id.org/arco/resource/Agent/>
 
+  SELECT DISTINCT ?culturalProperty ?title
+  WHERE {
+    ?culturalProperty a-cd:hasAuthor ?author ;  rdfs:label ?title .
+    ?author rdfs:label ?authorName
+    FILTER(?authorName = "Andrea Mantegna")
+  }
+</p>
 
 The first thing we notice from the results of our query is that most of the entities retrieved are of class “PreparatoryWork”. Moreover, none of these cultural properties appears to be one of Mantegna’s famous artworks, which means that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
