@@ -175,7 +175,7 @@ The query result is false, indicating that no triple using the a-cd:isWorkRelate
 
 PROPOSITION OF NEW TRIPLES:
 
-<p style="background-color: Thistle; padding: 5px;">
+<p style="background-color: LavenderBlush; padding: 5px;">
 <b>1.Triple:</b><br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> --> Predicate <br>
@@ -248,7 +248,7 @@ WHERE { <br>
 Since even this basic query returned no results, we became inclined to believe that the dataset may include no instances of this class in ArCo. However, we still decided to proceed, because the class exists in the ontology and because of the perception that such an implementation might enrich the knowledge graph. 
 Following this reasoning, we created a new triple which links the Cristo Morto to the new Alternative Dating. The IRI and the literal we used to represent the new class was invented using as a model the first, “official” Dating of the artwork. 
 
-<p style="background-color: Thistle; padding: 5px;">
+<p style="background-color: LavenderBlush; padding: 5px;">
 <b>1.Triple:</b> <br>
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Subject (Cristo Morto) <br>
 a-cd:hasDating --> Predicate <br>
@@ -276,7 +276,7 @@ GEMINI:
 
 Both ChatGPT and Gemini correctly identified the object of the new triple as <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a>. As a result, we decided to use it as the object of our new triple: 
 
-<p style="background-color: Thistle; padding: 5px;">
+<p style="background-color: LavenderBlush; padding: 5px;">
 <b>2.Triple:</b> <br>
 <https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject <br>
 a-cd:hasAlternativeDatingType --> Predicate <br>
@@ -285,7 +285,7 @@ a-cd:hasAlternativeDatingType --> Predicate <br>
   
 The next passage was linking our Alternative Date to the Event of its creation, which would allow us to specify the precise date we wanted to include. We retrieved the property from ArCo’s documentation, among those properties of which Dating is the subject in triples: <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a>. As far as the object is concerned, we continued to use, as a model for its creation, the Dating Event that was already present in relation to the Cristo Morto.
 
-<p style="background-color: Thistle; padding: 5px;">
+<p style="background-color: LavenderBlush; padding: 5px;">
 <b>3.Triple:</b> <br>
 <https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate <br>
@@ -308,7 +308,7 @@ WHERE { <br>
 
 From the list presented, we were then able to identify the predicate (<a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a>) and object (ti:TimeInterval) we needed for our last triple, although we has to modify the time interval.
 
-<p style="background-color: Thistle; padding: 5px;">
+<p style="background-color: LavenderBlush; padding: 5px;">
 <b>4.Triple:</b> <br>
 <https://w3id.org/arco/resource/Event/0300180068-creation-2> --> Subject <br>
 <a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a> --> Predicate <br>
@@ -417,7 +417,7 @@ WHERE { <br>
   
 Based on the many instances of this property we found in Arco which connect cultural events with the sites that host them, we believe it is also important to introduce a similar triple for our event:
 
-<p style="background-color: Thistle; padding: 5px;">
+<p style="background-color: LavenderBlush; padding: 5px;">
 <b>5.Triple:</b> <br>
 <https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.)  
 cis:isHostedBySite --> Predicate <br>
