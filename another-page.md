@@ -1,7 +1,7 @@
 
 <div class="topnav">
-  <a class="active" href="https://kevinits-site.github.io">Home</a>
-  <a class="active" href="https://kevinits-site.github.io/triples.html">Conclusion and Results</a>
+  <a class="active" href="https://kevinits-site.github.io">HOME</a>
+  <a class="active" href="https://kevinits-site.github.io/triples.html">CONCLUSION AND RESULTS</a>
 </div>
 
 
