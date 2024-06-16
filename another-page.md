@@ -437,12 +437,6 @@ Among the list of all artworks authored by Mantegna, we also noticed that the pa
 In this instance we only knew the material that was used. We were thus curious to know more about the technique; therefore we have verified it with the support of the LLMs.
 Firstly, we used the zero-shot prompting technique:
 CHAT GPT
-<img(https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/3ee3c32e-b1b4-44a2-8e02-a2dceb96edaa)>
-![Pic 4 3](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/59feef9c-a44b-4eff-9a5c-4f84d21dfa50)
-MISTRAL
-![Pic 4 4](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/531dbdc3-74f0-4a28-8601-f7d67fb7556c)
-LLAMA
-![Pic 4 5](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/c7c3e077-5d39-45e3-84e0-64baa3e7d68a)
-
+<img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/eab1dedb-6a87-406e-8cb0-27f0a9c64726"
 
 
