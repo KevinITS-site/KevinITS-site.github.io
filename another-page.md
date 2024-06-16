@@ -215,11 +215,11 @@ Parallelly, we decided to query the LLMS to help us gather relevant information 
 ![bild3a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/3b59f8f8-6e60-4d13-b90d-a70a76be1b17)
 
 By examining all the existing properties and values and comparing it with the information that the LLMS gave us, one of the first things we noticed could be improved was the date of the painting. As illustrated by Gemini (and partially ChatGPT too), the date of the painting is still uncertain, with two possible dates being attributed to it. However, this aspect is not taken into account in ArCo. At this point, our question was: <i>are there any properties or classes in ArCo that allow us to describe the presence of a second/alternative date attributed to a cultural property?</i>
-Our next step was then to check within the <a href= "http://dati.beniculturali.it/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">Context Description ontology of ArCo</a> . Its analysis led us to discover that one of the sub-classes of the class <i>Dating</i> is precisely Alternative dating: 
+Our next step was then to check within the <a href= "http://dati.beniculturali.it/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">Context Description ontology of ArCo</a>. Its analysis led us to discover that one of the sub-classes of the class <i>Dating</i> is precisely <i>Alternative dating</i>: 
 
 ![bild4a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/dd02648c-e117-4594-94ac-7ee22827b0ed)
 
-In other words, <i>Alternative dating</i> is a class that further allows to classify the type of Dating by specifying more in detail whether it is an obsolete dating, a different dating, etc. Since we observed that the class Dating is range of the property a-cd:hasDating, we could infer that Dating is used in triples where it is the object of the property mentioned. We could also infer that, since Alternative Dating is a sub-class of Dating, it inherits all its characteristics and properties, including <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>. This is why we decided to build a SPARQL query to check whether or not there were cultural properties linked to Alternative Dating through the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>:  
+In other words, <i>Alternative dating</i> is a class that further allows to classify the type of Dating by specifying more in detail whether it is an obsolete dating, a different dating, etc. Since we observed that the class Dating is range of the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>, we could infer that Dating is used in triples where it is the object of the property mentioned. We could also infer that, since Alternative Dating is a sub-class of Dating, it inherits all its characteristics and properties, including <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>. This is why we decided to build a SPARQL query to check whether or not there were cultural properties linked to Alternative Dating through the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>:  
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -249,14 +249,15 @@ Since even this basic query returned no results, we became inclined to believe t
 Following this reasoning, we created a new triple which links the Cristo Morto to the new Alternative Dating. The IRI and the literal we used to represent the new class was invented using as a model the first, “official” Dating of the artwork. 
 
 <b>1.Triple:</b> <br>
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Subject (Cristo Morto)
-a-cd:hasDating --> Predicate
-<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Object
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Subject (Cristo Morto) <br>
+a-cd:hasDating --> Predicate <br>
+<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Object <br>
 The literal of the Object (Alternative Dating) is <i>Cronologia 2 del bene 0300180068</i> (the code of the cultural property). 
 
 After the creation of the new triple and the Alternative Dating page/IRI, we needed to specify the type of Alternative Dating we are introducing. For this purpose, we used LLMS to help us, with a combination of zero-shot and chain of thought prompting technique: 
 
-Q: Andrea Mantegna's artwork "Cristo Morto" has two different possible datings: 1470-1474 ca. or 1483 ca. The alternative date is represented by the following IRI: <https://w3id.org/arco/resource/AlternativeDating/0300180068>. The property describing the type of alternative dating is <i>a-cd:hasAlternativeDatingType</i>. The object of the property is <i>a-cd:DifferentDatingType</i>. The 3 possible types are:
+Q: Andrea Mantegna's artwork "Cristo Morto" has two different possible datings: 1470-1474 ca. or 1483 ca. The alternative date is represented by the following IRI: <https://w3id.org/arco/resource/AlternativeDating/0300180068>. <br> 
+The property describing the type of alternative dating is <i>a-cd:hasAlternativeDatingType</i>. The object of the property is <i>a-cd:DifferentDatingType</i>. The 3 possible types are:
 1. <a href= "https://w3id.org/arco/ontology/context-description/OtherMethodOfDating">a-cd:otherMethodOfDating</a> <br>
 2. <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> <br>
 3. <a href= "https://w3id.org/arco/ontology/context-description/ObsoleteDating">a-cd:obsoleteDating</a> <br>
@@ -274,16 +275,16 @@ GEMINI:
 Both ChatGPT and Gemini correctly identified the object of the new triple as <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a>. As a result, we decided to use it as the object of our new triple: 
 
 <b>2.Triple:</b> <br>
-<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject
-a-cd:hasAlternativeDatingType --> Predicate
-<a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> --> Object
+<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject <br>
+a-cd:hasAlternativeDatingType --> Predicate <br>
+<a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> --> Object <br>
 
 The next passage was linking our Alternative Date to the Event of its creation, which would allow us to specify the precise date we wanted to include. We retrieved the property from ArCo’s documentation, among those properties of which Dating is the subject in triples: <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a>. As far as the object is concerned, we continued to use, as a model for its creation, the Dating Event that was already present in relation to the Cristo Morto.
 
 <b>3.Triple:</b> <br>
-<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject
-<a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate 
-<https://w3id.org/arco/resource/Event/0300180068-creation-2> --> Object 
+<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject <br>
+<a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate <br>
+<https://w3id.org/arco/resource/Event/0300180068-creation-2> --> Object <br>
 The literal of our Dating Event is Realizzazione 2 del bene 0300180068 
 
 At this point, in order to have an idea of which property and object were the most suitable to link our Event to its specific time (1483 ca.), we constructed a general SPARQL query to find the properties and objects related to the Dating Event that already existed in ArCo for the Cristo Morto. More specifically, the query would retrieve all triples where this entity was the subject, which is what we needed:
@@ -299,12 +300,12 @@ WHERE { <br>
     
 ![bild](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/2230244b-710a-492e-ae1b-bec3770964a8)
 
-From the list presented, we were then able to identify the predicate (a-cd:specificTime) and object ( ti:TimeInterval) we needed for our last triple, although we has to modify the time interval.
+From the list presented, we were then able to identify the predicate (<a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a>) and object (ti:TimeInterval) we needed for our last triple, although we has to modify the time interval.
 
 <b>4.Triple:</b> <br>
-•	https://w3id.org/arco/resource/Event/0300180068-creation-2    Subject
-•	a-cd :specificTime  Predicate
-•	https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483  Object (Literal : ca 1480 - ca 1483). 
+<https://w3id.org/arco/resource/Event/0300180068-creation-2> --> Subject <br>
+<a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a> --> Predicate <br>
+<https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483> --> Object (Literal : ca 1480 - ca 1483). <br> 
 Since a time interval is apparently the only possibility, we included a slightly larger span of time, from 1480 to 1483. 
 
 Finally, the last step was the creation of the new page of our Alternative Date, whose structure mirrors the style and content of the following example page:
@@ -312,23 +313,23 @@ Finally, the last step was the creation of the new page of our Alternative Date,
 ![bild8](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/5fff03d8-1cb6-40f2-905a-e9bc67d99e88)
 
 With all the information and triples gathered, this is the final page of the Alternative Dating of our cultural property: 
-Cronologia 2 del bene 0300180068
-https://w3id.org/arco/resource/Dating/0300180068-1ENTITÀ DI TIPO: Dating
-rdfs:label
-Cronologia 2 del bene 0300180068 / Dating 2 of cultural property 0300180068
+Cronologia 2 del bene 0300180068 <br>
+https://w3id.org/arco/resource/Dating/0300180068-1 ENTITÀ DI TIPO: Dating <br>
+rdfs:label <br>
+Cronologia 2 del bene 0300180068 / Dating 2 of cultural property 0300180068 <br>
 
-l0:name
-Cronologia 1 del bene 0300180068 / Dating 2 of cultural property 0300180068
+l0:name  <br>
+Cronologia 1 del bene 0300180068 / Dating 2 of cultural property 0300180068 <br>
 
-rdf:type
-a-cd:AlternativeDating
+rdf:type <br>
+a-cd:AlternativeDating <br>
 
-a-cd:hasAlternativeDatingType
-a-cd:DifferentDating
+a-cd:hasAlternativeDatingType <br>
+a-cd:DifferentDating <br>
 
-a-cd:hasDatingEvent
-<https://w3id.org/arco/resource/Event/0300180068-creation-2>
-Realizzazione 2 del bene 0300180068
+a-cd:hasDatingEvent <br>
+<https://w3id.org/arco/resource/Event/0300180068-creation-2> <br>
+Realizzazione 2 del bene 0300180068 <br>
 
 
 Next, we decided to look for cultural events related to this masterpiece using the following query:
@@ -408,9 +409,10 @@ WHERE { <br>
   
 Based on the many instances of this property we found in Arco which connect cultural events with the sites that host them, we believe it is also important to introduce a similar triple for our event:
 
-CulturalEvent: Gonzaga. La Celeste Galleria.  https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e  Subject 
-is hosted by site cis:isHostedBySite  Predicate 
-Site:Palazzo Te https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06  Object
+<b>5.Triple:</b> <br>
+<https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.) <br>   
+cis:isHostedBySite --> Predicate <br>
+<https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06> --> Object (Literal: Site)
 
 <div style="margin-top: 80px;"></div> 
 
