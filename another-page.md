@@ -445,7 +445,16 @@ Firstly, we used the zero-shot prompting technique:
 <b>LLAMA</b> <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/e4f6193a-e30e-4e57-95dc-bc5cc63d3406"> <br>
 Even if we asked what the painting technique is, they all answered adding other information, for example about the panel preparation, the layering, the chiaroscuro and the use of perspective. The only LLM that has replied properly is ChatGPT. On the other hand, Mistral wrongly affirms that it was made in oil, so we decide to correct it:
-
+<img width="383" alt="Pic 4 6" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/b70126ce-4413-4906-a8e3-56b03682833e"> <br>
+About Llama, it adds a technique that is not specified anywhere, that is the gold leaf technique.
+<img width="379" alt="Pic 4 7" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/d87306e9-faf4-4d6b-9be9-b25df3618ade"> <br>
+Secondly, we wanted to check if adding the painting technique could be a relevant information to add on ArCo ontology. In order to do so, we retrieved the information from ChatGPT, Llama and Mistral using the Generated Knowledge Prompting technique. <br>
+<b>CHAT GPT</b>
+<img width="442" alt="Pic 4 8" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/81a3d918-d2c4-4d97-ab86-dd5607b84714">
+<img width="439" alt="Pic 4-9" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/70174818-78b3-45b7-a6c4-08f84c9d8d8f"> <br>
+<b>MISTRAL</b>
+<img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/9fe596be-5d01-40c4-a2bd-0f86947061c7">
+<img width="380" alt="Pic 4 11" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/dd66a20c-3620-4c94-a779-52364443b06c">
 
 
 
