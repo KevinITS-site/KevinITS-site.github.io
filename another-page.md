@@ -214,12 +214,12 @@ Parallelly, we decided to query the LLMS to help us gather relevant information 
 
 ![bild3a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/3b59f8f8-6e60-4d13-b90d-a70a76be1b17)
 
-By examining all the existing properties and values and comparing it with the information that the LLMS gave us, one of the first things we noticed could be improved was the date of the painting. As illustrated by Gemini (and partially ChatGPT too), the date of the painting is still uncertain, with two possible dates being attributed to it. However, this aspect is not taken into account in ArCo. At this point, our question was: are there any properties or classes in ArCo that allow us to describe the presence of a second/alternative date attributed to a cultural property?
-Our next step was then to check within the Context Description ontology of ArCo. Its analysis led us to discover that one of the sub-classes of the class Dating is precisely Alternative dating: 
+By examining all the existing properties and values and comparing it with the information that the LLMS gave us, one of the first things we noticed could be improved was the date of the painting. As illustrated by Gemini (and partially ChatGPT too), the date of the painting is still uncertain, with two possible dates being attributed to it. However, this aspect is not taken into account in ArCo. At this point, our question was: <i>are there any properties or classes in ArCo that allow us to describe the presence of a second/alternative date attributed to a cultural property?</i>
+Our next step was then to check within the <a href= "http://dati.beniculturali.it/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">Context Description ontology of ArCo</a> . Its analysis led us to discover that one of the sub-classes of the class <i>Dating</i> is precisely Alternative dating: 
 
 ![bild4a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/dd02648c-e117-4594-94ac-7ee22827b0ed)
 
-In other words, Alternative dating is a class that further allows to classify the type of Dating by specifying more in detail whether it is an obsolete dating, a different dating, etc. Since we observed that the class Dating is range of the property a-cd:hasDating, we could infer that Dating is used in triples where it is the object of the property mentioned. We could also infer that, since Alternative Dating is a sub-class of Dating, it inherits all its characteristics and properties, including a-cd:hasDating.  This is why we decided to build a SPARQL query to check whether or not there were cultural properties linked to Alternative Dating through the property a-cd:hasDating:  
+In other words, <i>Alternative dating</i> is a class that further allows to classify the type of Dating by specifying more in detail whether it is an obsolete dating, a different dating, etc. Since we observed that the class Dating is range of the property a-cd:hasDating, we could infer that Dating is used in triples where it is the object of the property mentioned. We could also infer that, since Alternative Dating is a sub-class of Dating, it inherits all its characteristics and properties, including <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>. This is why we decided to build a SPARQL query to check whether or not there were cultural properties linked to Alternative Dating through the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>:  
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -234,7 +234,7 @@ WHERE { <br>
 } <br>
 </p>
   
-The query gave us no results, even if there were no syntax errors. For this reason, we decided to broaden the query and ask for a simple list all instances of Alternative Dating to see if any exists:
+The query gave us no results, even if there were no syntax errors. For this reason, we decided to broaden the query and ask for a simple list all instances of <a href= " https://w3id.org/arco/ontology/context-description/AlternativeDating">a-cd:alternativeDating</a> to see if any exists:
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
