@@ -16,7 +16,7 @@ Within the "Information Technology Skills" course at the University of Bologna, 
 
 <div style="margin-top: 18px;"></div>
 
-<a href="another-page.md#common-anchor"> - San Giorgio e il drago, Andrea Mantegna</a>
+<a href="another-page.md/#meinesektion">- San Giorgio e il drago, Andrea Mantegna</a>
 
 <h3 style="color: blue;">Topic</h3> 
 
