@@ -25,7 +25,7 @@ The goal of our project was to explore the artworks of the Italian Renaissance p
 <h4 style="color:blue; font-weight: bold">2. Andrea Mantegna</h4>
 
 <div style="text-align: center;">
-<img src="![mantegna](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/31799097-ce39-476e-a835-0705c342d052)">
+  <img src="![mantegna](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/ec53a451-a589-471e-a4bb-9778059757ed)">
 </div>
 
 Exploring ArCo
