@@ -50,8 +50,8 @@ The first thing we notice from the results of our query is that most of the enti
 
 ![bild 1](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/00977159-d961-4583-8fa9-cb6a3c210769)
 
-Although we are not satisfied with the result, we are keeping this first IRI retrieved for the painter: <br>
-https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b (a)
+Although we are not satisfied with the result, we are keeping this first, preliminary IRI retrieved for the painter: <br>
+<https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b> (prel) <br>
 At this point, we try to modify the target of our query by making it more specific. This is why we decide to build a query in order to search for one specific famous painting by Mantegna, the "Cristo Morto". We include the full title of the painting in our query , knowing that, since this subject is very popular in the history of art, it could give us too many results. 
 
 <p style="background-color: Azure; padding: 5px;">
@@ -109,10 +109,10 @@ PREFIX Agent: <https://w3id.org/arco/resource/Agent/> <br>
 SELECT (COUNT(?object) AS ?n) <br>
 WHERE { agent:5fd98076b40717d5f8162f1580228220 a-cd:isAuthorOf ?object . <br>
  } <br>
---> 7 results
+--> 7 results
  </p>
   
-The lower count (n. 7) of cultural properties authored by the second Agent, as compared to the general count (n. 82), confirms that this IRI focuses on a specific, more restricted subset of data related to Mantegna, likely within the regional context of Lombardy. 
+The lower count (n. 7) of cultural properties authored by the second Agent, as compared to the general count (n. 82), confirms that this <a href= "https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3">IRI</a> focuses on a specific, more restricted subset of data related to Mantegna, likely within the regional context of Lombardy. 
 
 Based on these considerations, we decide to focus for our project exclusively on the first agent, as it allows for a more general and richer exploration of the works of art. We therefore run the first SPARQL query of the project again, modifying it with the new information obtained:
 
@@ -134,10 +134,11 @@ As expected, this time the query gives us a many more cultural properties, inclu
 
 ![bild 3](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/b9a32e8a-3442-4487-b3aa-c6e6cf346b30)
 
-This might imply that the very first Agent (a) we have retrieved is the one associated with the preparatory versions of the paintings, while this one is connected to their final, “official” versions. While the first agent is already linked to the second one through owl:sameAs, we could ensure that the second agent is also linked back to the first one, thus specifying that they refer to the same entity. This would make sure that the relationship is bidirectional: 
+This might imply that the very first, <a href= "https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b">preliminary Agent (prel)</a> we have retrieved is the one associated with the preparatory versions of the paintings, while this one is connected to their final, “official” versions. While the first agent is already linked to the second one through <i>owl:sameAs</i>, we could ensure that the second agent is also linked back to the first one, thus specifying that they refer to the same entity. This would make sure that the relationship is bidirectional: 
 
- https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b owl:sameAs
-< https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3>
+<https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b> <br>
+owl:sameAs <br>
+<https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3> <br>
 
 Following these considerations, we believe it could also be useful to link the preparatory works to their final versions or vice versa. Our question is: are there any properties in ArCo that define this type of relationship? To answer it, we research in ArCo's Documentation to identify related properties. Such a property might be found in the Context Description module of the ArCo ontology. We find out that, as a matter of fact, this object property already exists:
 
@@ -178,10 +179,12 @@ The query result is false, indicating that no triple using the a-cd:isWorkRelate
 
 PROPOSITION OF NEW TRIPLES:
 
+1. Triple:
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Subject <br>
 a-cd:hasRelatedWork --> Predicate <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Object <br>
- 
+
+2. Triple:
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Subject <br>
 a-cd:isRelatedWork --> Predicate <br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object <br>
