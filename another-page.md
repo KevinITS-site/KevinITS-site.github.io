@@ -386,10 +386,10 @@ Now considering the previous sentences, can you write me a triple in RDF using t
  
 The results were the following: 
 
-GEMINI:
+GEMINI: <br>
 ![bild10](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/7acfcf88-8d7e-4243-ab27-df89298bd6e8)
 
-CHATGPT:
+CHATGPT: <br>
 ![bild11](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/c6ff9d63-3297-440a-a62a-32a874df4e08)
 
 Gemini used the wrong IRI for Palazzo Te. However, we noticed that it understood that the predicate “was held “ is different from “is kept” and tried to guess an appropriate predicate for the sentence: the event Gonzaga La celeste Galleria was held in Palazzo Te by proposing “a-loc:heldAtLocation. On the contrary, ChatGPT is not able to understand that the predicate has to be different and creates a triple with the same predicate: a-loc:hasCulturalInstituteOrsite.
