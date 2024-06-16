@@ -179,12 +179,12 @@ The query result is false, indicating that no triple using the a-cd:isWorkRelate
 
 PROPOSITION OF NEW TRIPLES:
 
-1.Triple: <br>
+<b>1.Triple:</b><br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Subject <br>
 a-cd:hasRelatedWork --> Predicate <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Object <br>
 
-2.Triple: <br>
+<b>2.Triple:</b> <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Subject <br>
 a-cd:isRelatedWork --> Predicate <br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object <br>
