@@ -437,12 +437,12 @@ Among the list of all artworks authored by Mantegna, we also noticed that the pa
 In this instance we only knew the material that was used. We were thus curious to know more about the technique; therefore we have verified it with the support of the LLMs.
 Firstly, we used the zero-shot prompting technique:
 <br>
-CHAT GPT <br>
+<b>CHAT GPT</b> <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/eab1dedb-6a87-406e-8cb0-27f0a9c64726">
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/561efc28-9499-407f-952c-19fb8c89e8b3"> <br>
-MISTRAL <br>
+<b>MISTRAL</b> <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/b7c70205-6a0e-40ea-a2b5-2eafd4cb5c11"> <br>
-LLAMA <br>
+<b>LLAMA</b> <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/e4f6193a-e30e-4e57-95dc-bc5cc63d3406"> <br>
 Even if we asked what the painting technique is, they all answered adding other information, for example about the panel preparation, the layering, the chiaroscuro and the use of perspective. The only LLM that has replied properly is ChatGPT. On the other hand, Mistral wrongly affirms that it was made in oil, so we decide to correct it:
 
