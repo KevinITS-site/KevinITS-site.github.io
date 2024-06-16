@@ -38,7 +38,7 @@ We want to identify and explore artworks related to Andrea Mantegna in the ArCo 
 
 <h3 style="color: blue;">Team</h3>
 
-Claudia Caterino, Francesca Melgari, Alice Pierassa, Elisa Sadun & Kevin Spirk 
+Claudia Caterino, Francesca Regina Melgari, Alice Pierassa, Elisa Sadun & Kevin Spirk 
 
 <h3 style="color: blue;">Results</h3>
 
