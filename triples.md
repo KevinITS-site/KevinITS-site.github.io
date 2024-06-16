@@ -42,3 +42,4 @@ https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object
 
 
 [HOME](index.md)
+[FULL REPORT](another-page.md)
