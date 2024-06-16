@@ -191,7 +191,7 @@ PROPOSITION OF NEW TRIPLES:
 
 <h2 id="meinsektion"></h2>
 <div id="specific-section"><a name="custom-anchor"></a>
-<h4 style="color:blue ;">3. Cristo Morto, Andrea Mantegna</h4></div>
+<h4 style="color:blue ; font-weight: bold">3. Cristo Morto, Andrea Mantegna</h4></div>
 
 Following this preliminary phase, we have decided to focus more specifically on two of his paintings that appeared in need of further enrichment. Consequently, the next two sections will be devoted to the methodology, results and analysis of “Cristo Morto” and “San Giorgio e il drago”.
 
