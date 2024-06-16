@@ -1,6 +1,8 @@
 [HOME](index.md)
 [FULL REPORT](another-page.md)
 
+<h3 style="color:blue; font-size: 2em;">CONCLUSION AND RESULTS</h3>
+
 These are the triples we propose to enrich the ArCo knowledge graph:
 
 <a name="mm-anchor"></a>
