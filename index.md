@@ -12,7 +12,7 @@ layout: default
 
 Within the "Information Technology Skills" course at the University of Bologna, we worked on a project to enrich the ArCo knowledge graph of the Italian Ministry of Cultural Heritage. On the homepage of our website you can find our topic, the goals we wanted to achieve with this project, the methodology we applied and who we are. In order to get more detailled information about our project click [here](another-page.md) for the full project report or directly choose the artwork you're interested in:
 
-<a href="another-page.md#c-anchor"> - Cristo morto, Andrea Mantegna</a>
+<a href="https://kevinits-site.github.io/another-page.html/#meinsektion">- Cristo Morto, Andrea Mantegna</a>
 
 <div style="margin-top: 18px;"></div>
 
