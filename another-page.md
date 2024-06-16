@@ -108,7 +108,7 @@ WHERE { agent:5fd98076b40717d5f8162f1580228220 a-cd:isAuthorOf ?object . <br>
 --> 7 results
  </p>
   
-The lower count (n. 7) of cultural properties authored by the second Agent, as compared to the general count (n. 82), confirms that this <a href= "https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3">IRI</a> focuses on a specific, more restricted subset of data related to Mantegna, likely within the regional context of Lombardy. 
+The lower count (n. 7) of cultural properties authored by the second Agent, as compared to the general count (n. 82), confirms that this <a href= "https://w3id.org/arco/resource/Agent/5fd98076b40717d5f8162f1580228220">IRI</a> focuses on a specific, more restricted subset of data related to Mantegna, likely within the regional context of Lombardy. 
 
 Based on these considerations, we decide to focus for our project exclusively on the first agent, as it allows for a more general and richer exploration of the works of art. We therefore run the first SPARQL query of the project again, modifying it with the new information obtained:
 
