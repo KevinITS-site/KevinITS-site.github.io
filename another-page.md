@@ -454,7 +454,13 @@ Secondly, we wanted to check if adding the painting technique could be a relevan
 <img width="439" alt="Pic 4-9" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/70174818-78b3-45b7-a6c4-08f84c9d8d8f"> <br>
 <b>MISTRAL</b> <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/9fe596be-5d01-40c4-a2bd-0f86947061c7">
-<img width="380" alt="Pic 4 11" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/dd66a20c-3620-4c94-a779-52364443b06c">
+<img width="380" alt="Pic 4 11" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/dd66a20c-3620-4c94-a779-52364443b06c"> <br>
+<b>LLAMA</b>
+<img width="372" alt="Pic 4 12" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/4ff422bc-9e42-456c-91f5-7fbbbe89e867"> <br>
+According to ChatGPT, Mistral and Llama the painting technique was a relevant information to add, therefore we wanted to link the “pittura a tempera” property value to the painting. We ran the following QUERY to search the property value “pittura a tempera”. See the results at this link. <br>
+
+
+
 
 
 
