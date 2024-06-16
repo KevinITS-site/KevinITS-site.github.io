@@ -457,7 +457,7 @@ Secondly, we wanted to check if adding the painting technique could be a relevan
 <img width="380" alt="Pic 4 11" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/dd66a20c-3620-4c94-a779-52364443b06c"> <br>
 <b>LLAMA</b> <br>
 <img width="372" alt="Pic 4 12" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/4ff422bc-9e42-456c-91f5-7fbbbe89e867"> <br>
-According to ChatGPT, Mistral and Llama the painting technique was a relevant information to add, therefore we wanted to link the “pittura a tempera” property value to the painting. We ran the following QUERY to search the property value “pittura a tempera”. See the results at <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fclothing+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">this</a> link. <br>
+According to ChatGPT, Mistral and Llama the painting technique was a relevant information to add, therefore we wanted to link the “pittura a tempera” property value to the painting. We ran the following query to search the property value “pittura a tempera”. See the results at <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fclothing+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">this</a> link. <br>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -469,12 +469,27 @@ FILTER(?label = "pittura a tempera") <br>
 } <br>
 LIMIT 20 <br>
 
-Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the a-dd:hasMaterialorTechnique predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query at <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">this</a> link.
+Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the a-dd:hasMaterialorTechnique predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query at <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">this</a> link. <br>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
+PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
+PREFIX a-dd:<https://w3id.org/arco/ontology/denotative-description/> <br>
 
+SELECT DISTINCT ?cp ?label <br>
+WHERE { <br>
+?CultureProperty a-dd:hasMaterialOrTechnique ?cp . <br>
+?c rdfs:label ?label <br>
+FILTER(?label = "pittura a tempera") <br>
+} <br>
+LIMIT 20 <br>
 
+As a result, we propose a new triple with the predicate “hasMaterialOrTechnique” and the property value “pittura a tempera”, which comprehends both the material and the technique. <br>
 
+https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340  Subject <br>
+a-dd:hasMaterialOrTechnique  Predicate <br>
+https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera  Object <br>
 
-
+Since we wanted to be more accurate, we realised it would be better to provide both pieces of information, not only the technique but also the material that is already present. For this reason, we repeated the same procedure. We ran the query: <br>
 
 
 
