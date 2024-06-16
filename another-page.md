@@ -436,7 +436,7 @@ cis:isHostedBySite --> Predicate <br>
 Among the list of all artworks authored by Mantegna, we also noticed that the painting https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0500402340.html presented partial information about the following property:
 <img width="778" alt="Pic 4 1" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/08cf355d-0e50-40b9-8d7d-969085f72802"> <br>
 In this instance we only knew the material that was used. We were thus curious to know more about the technique; therefore we have verified it with the support of the LLMs.
-Firstly, we used the zero-shot prompting technique:
+Firstly, we used the zero-shot prompting technique: <br>
 
 CHAT GPT: <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/eab1dedb-6a87-406e-8cb0-27f0a9c64726">
