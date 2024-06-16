@@ -481,7 +481,7 @@ FILTER(?label = "pittura a tempera") <br>
 LIMIT 20 <br>
 </p>
 
-Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the a-dd:hasMaterialorTechnique predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
+Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the a-dd:MaterialOrTechnique predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
@@ -498,12 +498,12 @@ FILTER(?label = "pittura a tempera") <br>
 LIMIT 20 <br>
 </p>
 
-As a result, we propose a new triple with the predicate “hasMaterialOrTechnique” and the property value “pittura a tempera”, which comprehends both the material and the technique. <br>
+As a result, we propose a new triple with the predicate <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> and the property value “pittura a tempera”, which comprehends both the material and the technique. <br>
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>1.Triple:</b> <br>
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340> --> Subject <br>
-a-dd:hasMaterialOrTechnique --> Predicate <br>
+<a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> --> Predicate <br>
 <https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera> --> Object <br>
 </p>
 
@@ -524,7 +524,7 @@ LIMIT 20 <br>
 
 <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fcp+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the link. <br>
 
-We then checked if the predicate “hasMaterialOrTechnique” is appropriate for the property value “tavola/pittura a tempera”. <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=SELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3FCultureProperty+a-dd%3AhasMaterialOrTechnique+%3Fcp+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the results. <br>
+We then checked if the predicate <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> is appropriate for the property value “tavola/pittura a tempera”. <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=SELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3FCultureProperty+a-dd%3AhasMaterialOrTechnique+%3Fcp+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the results. <br>
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
@@ -544,7 +544,7 @@ Finally, here is the complete triple: <br>
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>2.Triple:</b> <br>
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340> --> Subject <br>
-a-dd:hasMaterialOrTechnique --> Predicate <br>
+<a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> --> Predicate <br>
 <https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera> --> Object <br>
 </p>
 
