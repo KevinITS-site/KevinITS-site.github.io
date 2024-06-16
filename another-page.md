@@ -189,6 +189,7 @@ PROPOSITION OF NEW TRIPLES:
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Object <br>
 </p>
 
+<h2 id="meinsektion"></h2>
 <div id="specific-section"><a name="custom-anchor"></a>
 <h4 style="color:blue ;">3. Cristo Morto, Andrea Mantegna</h4></div>
 
