@@ -24,10 +24,6 @@ The goal of our project was to explore the artworks of the Italian Renaissance p
 <a name="target-section"></a>
 <h4 style="color:blue; font-weight: bold">2. Andrea Mantegna</h4>
 
-<div style="text-align: center;">
-  <img src="![mantegna](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/ec53a451-a589-471e-a4bb-9778059757ed)">
-</div>
-
 Exploring ArCo
 
 Our first step is looking for all the cultural properties authored by Andrea Mantegna. However, since we don’t have an IRI for the author yet, we build a query for all the strings whose value contains the words “Andrea Mantegna”:
@@ -46,7 +42,7 @@ Our first step is looking for all the cultural properties authored by Andrea Man
   } <br>
 </p>
 
-The first thing we notice from the results of our query is that most of the entities retrieved are of class “PreparatoryWork”. Moreover, none of these cultural properties appears to be one of Mantegna’s famous artworks, which means that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
+The first thing we notice from the results of our query is that most of the entities retrieved are of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appears to be one of Mantegna’s famous artworks, which means that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
 ![bild 1](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/00977159-d961-4583-8fa9-cb6a3c210769)
 
@@ -71,7 +67,7 @@ This query successfully returns us two results:
 
 ![bild 2](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/2bc78b9b-7303-4d6a-b691-6572535e49d9)
 
-After querying for the properties and values associated with both entities in the ArCo dataset, and checking the property cd:hasAuthor, we are able to identify two other IRIs for the author Andrea Mantegna.
+After querying for the properties and values associated with both entities in the ArCo dataset, and checking the property <a href= "https://w3id.org/arco/ontology/context-description/hasAuthor">cd:hasAuthor</a>, we are able to identify two other IRIs for the author Andrea Mantegna.
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -130,7 +126,7 @@ a-cd:hasAuthor agent:f006a78cf246d5b7d73539da8eac78e3 <br>
 ORDER BY ASC (?title) <br>
 </p>
   
-As expected, this time the query gives us a many more cultural properties, including Mantegna’ most famous artworks. Moreover, all the cultural properties retrieved belong to the class HistoricorArtisticProperty, and not the previously mentioned class PreparatoryWork:
+As expected, this time the query gives us a many more cultural properties, including Mantegna’s most famous artworks. Moreover, all the cultural properties retrieved belong to the class HistoricorArtisticProperty, and not the previously mentioned class PreparatoryWork:
 
 ![bild 3](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/b9a32e8a-3442-4487-b3aa-c6e6cf346b30)
 
@@ -140,7 +136,7 @@ This might imply that the very first, <a href= "https://w3id.org/arco/resource/A
 owl:sameAs <br>
 <https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3> <br>
 
-Following these considerations, we believe it could also be useful to link the preparatory works to their final versions or vice versa. Our question is: are there any properties in ArCo that define this type of relationship? To answer it, we research in ArCo's Documentation to identify related properties. Such a property might be found in the Context Description module of the ArCo ontology. We find out that, as a matter of fact, this object property already exists:
+Following these considerations, we believe it could also be useful to link the preparatory works to their final versions or vice versa. Our question is: <i>are there any properties in ArCo that define this type of relationship?</i> To answer it, we research in ArCo's Documentation to identify related properties. Such a property might be found in the Context Description module of the ArCo ontology. We find out that, as a matter of fact, this object property already exists:
 
 <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> <br>
 
@@ -179,15 +175,19 @@ The query result is false, indicating that no triple using the a-cd:isWorkRelate
 
 PROPOSITION OF NEW TRIPLES:
 
+<p style="background-color: Thistle; padding: 5px;">
 <b>1.Triple:</b><br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> --> Predicate <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Object <br>
+</p>
 
+<p style="background-color: Thistle; padding: 5px;">
 <b>2.Triple:</b> <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/isRelatedWork">a-cd:isRelatedWork</a> --> Predicate <br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object <br>
+</p>
 
 <div id="specific-section"><a name="custom-anchor"></a>
 <h4 style="color:blue ;">3. Cristo Morto, Andrea Mantegna</h4></div>
@@ -248,12 +248,14 @@ WHERE { <br>
 Since even this basic query returned no results, we became inclined to believe that the dataset may include no instances of this class in ArCo. However, we still decided to proceed, because the class exists in the ontology and because of the perception that such an implementation might enrich the knowledge graph. 
 Following this reasoning, we created a new triple which links the Cristo Morto to the new Alternative Dating. The IRI and the literal we used to represent the new class was invented using as a model the first, “official” Dating of the artwork. 
 
+<p style="background-color: Thistle; padding: 5px;">
 <b>1.Triple:</b> <br>
 <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Subject (Cristo Morto) <br>
 a-cd:hasDating --> Predicate <br>
 <https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Object <br>
 The literal of the Object (Alternative Dating) is <i>Cronologia 2 del bene 0300180068</i> (the code of the cultural property). 
-
+</p>
+  
 After the creation of the new triple and the Alternative Dating page/IRI, we needed to specify the type of Alternative Dating we are introducing. For this purpose, we used LLMS to help us, with a combination of zero-shot and chain of thought prompting technique: 
 
 Q: Andrea Mantegna's artwork "Cristo Morto" has two different possible datings: 1470-1474 ca. or 1483 ca. The alternative date is represented by the following IRI: <https://w3id.org/arco/resource/AlternativeDating/0300180068>. <br> 
@@ -261,7 +263,7 @@ The property describing the type of alternative dating is <i>a-cd:hasAlternative
 1. <a href= "https://w3id.org/arco/ontology/context-description/OtherMethodOfDating">a-cd:otherMethodOfDating</a> <br>
 2. <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> <br>
 3. <a href= "https://w3id.org/arco/ontology/context-description/ObsoleteDating">a-cd:obsoleteDating</a> <br>
-Which of these 3 object properties is the appropriate one for a triple?
+Which of these 3 object properties is the appropriate one for a triple? <br>
 A: Let’s think step by step.
 
 CHAT GPT:
@@ -274,18 +276,22 @@ GEMINI:
 
 Both ChatGPT and Gemini correctly identified the object of the new triple as <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a>. As a result, we decided to use it as the object of our new triple: 
 
+<p style="background-color: Thistle; padding: 5px;">
 <b>2.Triple:</b> <br>
 <https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject <br>
 a-cd:hasAlternativeDatingType --> Predicate <br>
 <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> --> Object <br>
-
+</p>
+  
 The next passage was linking our Alternative Date to the Event of its creation, which would allow us to specify the precise date we wanted to include. We retrieved the property from ArCo’s documentation, among those properties of which Dating is the subject in triples: <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a>. As far as the object is concerned, we continued to use, as a model for its creation, the Dating Event that was already present in relation to the Cristo Morto.
 
+<p style="background-color: Thistle; padding: 5px;">
 <b>3.Triple:</b> <br>
 <https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate <br>
 <https://w3id.org/arco/resource/Event/0300180068-creation-2> --> Object <br>
 The literal of our Dating Event is Realizzazione 2 del bene 0300180068 
+</p>
 
 At this point, in order to have an idea of which property and object were the most suitable to link our Event to its specific time (1483 ca.), we constructed a general SPARQL query to find the properties and objects related to the Dating Event that already existed in ArCo for the Cristo Morto. More specifically, the query would retrieve all triples where this entity was the subject, which is what we needed:
 
@@ -302,11 +308,13 @@ WHERE { <br>
 
 From the list presented, we were then able to identify the predicate (<a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a>) and object (ti:TimeInterval) we needed for our last triple, although we has to modify the time interval.
 
+<p style="background-color: Thistle; padding: 5px;">
 <b>4.Triple:</b> <br>
 <https://w3id.org/arco/resource/Event/0300180068-creation-2> --> Subject <br>
 <a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a> --> Predicate <br>
 <https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483> --> Object (Literal : ca 1480 - ca 1483). <br> 
 Since a time interval is apparently the only possibility, we included a slightly larger span of time, from 1480 to 1483. 
+</p>
 
 Finally, the last step was the creation of the new page of our Alternative Date, whose structure mirrors the style and content of the following example page:
 
@@ -409,10 +417,12 @@ WHERE { <br>
   
 Based on the many instances of this property we found in Arco which connect cultural events with the sites that host them, we believe it is also important to introduce a similar triple for our event:
 
+<p style="background-color: Thistle; padding: 5px;">
 <b>5.Triple:</b> <br>
 <https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.)  
 cis:isHostedBySite --> Predicate <br>
 <https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06> --> Object (Literal: Site)
+</p>
 
 <div style="margin-top: 80px;"></div> 
 
