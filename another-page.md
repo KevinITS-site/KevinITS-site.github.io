@@ -164,7 +164,7 @@ a-cd:hasAuthor agent:f006a78cf246d5b7d73539da8eac78e3 . <br>
 } <br>
 </p>
   
-Since we obtain no results, we use ASK to test if the property a-cd:hasRelatedWork is present at all within the ArCo ontology:
+Since we obtain no results, we use ASK to test if the property <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> is present at all within the ArCo ontology:
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -181,12 +181,12 @@ PROPOSITION OF NEW TRIPLES:
 
 <b>1.Triple:</b><br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Subject <br>
-a-cd:hasRelatedWork --> Predicate <br>
+<a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> --> Predicate <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Object <br>
 
 <b>2.Triple:</b> <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Subject <br>
-a-cd:isRelatedWork --> Predicate <br>
+<a href= "https://w3id.org/arco/ontology/context-description/isRelatedWork">a-cd:isRelatedWork</a> --> Predicate <br>
 https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object <br>
 
 <div id="specific-section"><a name="custom-anchor"></a>
@@ -350,7 +350,7 @@ FILTER(REGEX(?label, "Cristo morto nel sepolcro e tre dolenti, compianto sul Cri
 } <br>
 </p> 
 
-The results of this query were just two, however we noticed that they were related to the same event: “Gonzaga. La Celeste Galleria”. We thus remarked that no information was provided about the exact location of the event. To retrieve this missing information, we used the zero-shot prompting technique on Chat GPT. The exact prompt was: “Where did the event "Gonzaga, La Celeste Galleria" take place?” and this was the answer:
+The results of this query were just two, however we noticed that they were related to the same event: “Gonzaga. La Celeste Galleria”. We thus remarked that no information was provided about the exact location of the event. To retrieve this missing information, we used the zero-shot prompting technique on ChatGPT. The exact prompt was: “Where did the event "Gonzaga, La Celeste Galleria" take place?” and this was the answer:
 
 ![bild9](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/4b9adb47-8ba2-43be-9689-54bfa1371cb5)
 
@@ -372,7 +372,7 @@ We found two different IRIs, one referring to the Museo Civico of Palazzo Te and
 1. <a href= "https://w3id.org/arco/resource/Lombardia/CulturalInstituteOrSite/df850573204fac1a1938c8ecbd703b30"> IRI Museo Civico</a> <br>
 2. <a href= "https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06"> IRI Palazzo Te</a>
 
-Considering that we were dealing with an event, we opted for the IRI of Palazzo Te, estimating that it indicates the site in a more general sense and could hence produce a wider range of results. To find the right triple, we questioned Chat GPT again, and we also included another LLM, that is, Gemini. This time, we employed a few-shot prompting technique and we asked:
+Considering that we were dealing with an event, we opted for the IRI of Palazzo Te, estimating that it indicates the site in a more general sense and could hence produce a wider range of results. To find the right triple, we questioned ChatGPT again, and we also included another LLM, that is, Gemini. This time, we employed a few-shot prompting technique and we asked:
 
 In RDF the sentence Cristo Morto by Mantegna is kept in Pinacoteca di Brera is expressed: 
 Subject: Cristo Morto = https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068  
