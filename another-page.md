@@ -182,7 +182,7 @@ https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Subject
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Object <br>
 </p>
 
-<p style="background-color: Thistle; padding: 5px;">
+<p style="background-color: LavenderBlush; padding: 5px;">
 <b>2.Triple:</b> <br>
 https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/isRelatedWork">a-cd:isRelatedWork</a> --> Predicate <br>
@@ -430,34 +430,45 @@ cis:isHostedBySite --> Predicate <br>
 <h4 style="color:blue; font-weight: bold;">4. San Giorgio e il drago, Andrea Mantegna</h4>
 
 <div style= "text-align: center;">
-<img src="https://github.com/capa46/project/assets/170109035/9e13c0ed-731d-459a-b603-5eba791f84be" width="200" height="400">
+<img src="![Accademia_-_San_Giorgio_di_Andrea_Mantegna_Cat 588](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/b23522f6-19f6-4316-b156-e960a59df3be)
+" width="200" height="400">
 </div>
 Among the list of all artworks authored by Mantegna, we also noticed that the painting https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0500402340.html presented partial information about the following property:
 <img width="778" alt="Pic 4 1" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/08cf355d-0e50-40b9-8d7d-969085f72802"> <br>
 In this instance we only knew the material that was used. We were thus curious to know more about the technique; therefore we have verified it with the support of the LLMs.
 Firstly, we used the zero-shot prompting technique:
-<br>
-<b>CHAT GPT</b> <br>
+
+CHAT GPT: <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/eab1dedb-6a87-406e-8cb0-27f0a9c64726">
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/561efc28-9499-407f-952c-19fb8c89e8b3"> <br>
-<b>MISTRAL</b> <br>
+
+MISTRAL: <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/b7c70205-6a0e-40ea-a2b5-2eafd4cb5c11"> <br>
-<b>LLAMA</b> <br>
+
+LLAMA: <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/e4f6193a-e30e-4e57-95dc-bc5cc63d3406"> <br>
-Even if we asked what the painting technique is, they all answered adding other information, for example about the panel preparation, the layering, the chiaroscuro and the use of perspective. The only LLM that has replied properly is ChatGPT. On the other hand, Mistral wrongly affirms that it was made in oil, so we decide to correct it:
+
+Even if we asked what the painting technique is, they all answered adding other information, for example about the panel preparation, the layering, the chiaroscuro and the use of perspective. The only LLM that has replied properly is ChatGPT. On the other hand, Mistral wrongly affirms that it was made in oil, so we decide to correct it: <br>
 <img width="383" alt="Pic 4 6" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/b70126ce-4413-4906-a8e3-56b03682833e"> <br>
 About Llama, it adds a technique that is not specified anywhere, that is the gold leaf technique. <br>
 <img width="379" alt="Pic 4 7" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/d87306e9-faf4-4d6b-9be9-b25df3618ade"> <br>
+
 Secondly, we wanted to check if adding the painting technique could be a relevant information to add on ArCo ontology. In order to do so, we retrieved the information from ChatGPT, Llama and Mistral using the Generated Knowledge Prompting technique. <br>
-<b>CHAT GPT</b> <br>
+
+CHAT GPT: <br>
 <img width="442" alt="Pic 4 8" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/81a3d918-d2c4-4d97-ab86-dd5607b84714"> <br> 
 <img width="439" alt="Pic 4-9" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/70174818-78b3-45b7-a6c4-08f84c9d8d8f"> <br>
-<b>MISTRAL</b> <br>
+
+MISTRAL: <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/9fe596be-5d01-40c4-a2bd-0f86947061c7">
 <img width="380" alt="Pic 4 11" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/dd66a20c-3620-4c94-a779-52364443b06c"> <br>
-<b>LLAMA</b> <br>
+
+LLAMA: <br>
 <img width="372" alt="Pic 4 12" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/4ff422bc-9e42-456c-91f5-7fbbbe89e867"> <br>
-According to ChatGPT, Mistral and Llama the painting technique was a relevant information to add, therefore we wanted to link the “pittura a tempera” property value to the painting. We ran the following query to search the property value “pittura a tempera”. See the results at <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fclothing+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">this</a> link. <br>
+
+According to ChatGPT, Mistral and Llama the painting technique was a relevant information to add, therefore we wanted to link the “pittura a tempera” property value to the painting. We ran the following query to search the property value “pittura a tempera”. See the results <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fclothing+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
+
+<p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -468,8 +479,11 @@ WHERE { <br>
 FILTER(?label = "pittura a tempera") <br>
 } <br>
 LIMIT 20 <br>
+</p>
 
-Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the a-dd:hasMaterialorTechnique predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query at <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">this</a> link. <br>
+Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the a-dd:hasMaterialorTechnique predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
+
+<p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -482,14 +496,20 @@ WHERE { <br>
 FILTER(?label = "pittura a tempera") <br>
 } <br>
 LIMIT 20 <br>
+</p>
 
 As a result, we propose a new triple with the predicate “hasMaterialOrTechnique” and the property value “pittura a tempera”, which comprehends both the material and the technique. <br>
 
-https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340 → Subject <br>
-a-dd:hasMaterialOrTechnique → Predicate <br>
-https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera → Object <br>
+<p style="background-color: LavenderBlush; padding: 5px;">
+<b>1.Triple:</b> <br>
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340> --> Subject <br>
+a-dd:hasMaterialOrTechnique --> Predicate <br>
+<https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera> --> Object <br>
+</p>
 
 Since we wanted to be more accurate, we realised it would be better to provide both pieces of information, not only the technique but also the material that is already present. For this reason, we repeated the same procedure. We ran the query: <br>
+
+<p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -500,11 +520,13 @@ WHERE { <br>
 FILTER(?label = "tavola/pittura a tempera") <br>
 } <br>
 LIMIT 20 <br>
+</p>
 
 <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fcp+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the link. <br>
 
 We then checked if the predicate “hasMaterialOrTechnique” is appropriate for the property value “tavola/pittura a tempera”. <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=SELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3FCultureProperty+a-dd%3AhasMaterialOrTechnique+%3Fcp+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the results. <br>
 
+<p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -515,13 +537,16 @@ WHERE { <br>
 FILTER(?label = "tavola/pittura a tempera") <br>
 } <br>
 LIMIT 20 <br>
+</p>
 
 Finally, here is the complete triple: <br>
 
-https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340 → Subject <br>
-a-dd:hasMaterialOrTechnique → Predicate <br>
-https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera → Object <br>
-
+<p style="background-color: LavenderBlush; padding: 5px;">
+<b>2.Triple:</b> <br>
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340> --> Subject <br>
+a-dd:hasMaterialOrTechnique --> Predicate <br>
+<https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera> --> Object <br>
+</p>
 
 
 
