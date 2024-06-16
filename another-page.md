@@ -501,7 +501,27 @@ FILTER(?label = "tavola/pittura a tempera") <br>
 } <br>
 LIMIT 20 <br>
 
-<a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fcp+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the link.
+<a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fcp+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the link. <br>
+
+We then checked if the predicate “hasMaterialOrTechnique” is appropriate for the property value “tavola/pittura a tempera”. <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=SELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3FCultureProperty+a-dd%3AhasMaterialOrTechnique+%3Fcp+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22tavola%2Fpittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">Here</a> the results. <br>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
+PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
+SELECT DISTINCT ?cp ?label <br>
+WHERE { <br>
+?CultureProperty a-dd:hasMaterialOrTechnique ?cp . <br>
+?c rdfs:label ?label <br>
+FILTER(?label = "tavola/pittura a tempera") <br>
+} <br>
+LIMIT 20 <br>
+
+Finally, here is the complete triple: <br>
+
+https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340 → Subject <br>
+a-dd:hasMaterialOrTechnique → Predicate <br>
+https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera → Object <br>
+
 
 
 
