@@ -1,7 +1,7 @@
 
 <div class="topnav">
   <a class="active" href="https://kevinits-site.github.io">Home</a>
-  <a class="active" href="https://kevinits-site.github.io/triples.html">Results</a>
+  <a class="active" href="https://kevinits-site.github.io/triples.html">Conclusion and Results</a>
 </div>
 
 
@@ -548,7 +548,10 @@ a-dd:hasMaterialOrTechnique --> Predicate <br>
 <https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera> --> Object <br>
 </p>
 
-
+<div class="topnav">
+  <a class="active" href="https://kevinits-site.github.io">Home</a>
+  <a class="active" href="https://kevinits-site.github.io/triples.html">Conclusion and Results</a>
+</div>
 
 
 
