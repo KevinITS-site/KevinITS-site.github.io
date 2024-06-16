@@ -248,15 +248,19 @@ WHERE { <br>
 Since even this basic query returned no results, we became inclined to believe that the dataset may include no instances of this class in ArCo. However, we still decided to proceed, because the class exists in the ontology and because of the perception that such an implementation might enrich the knowledge graph. 
 Following this reasoning, we created a new triple which links the Cristo Morto to the new Alternative Dating. The IRI and the literal we used to represent the new class was invented using as a model the first, “official” Dating of the artwork. 
 
- NEW TRIPLE 1
-•	https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068  Subject (Cristo Morto)
-•	a-cd:hasDating  Predicate
-•	https://w3id.org/arco/resource/AlternativeDating/0300180068  Object. 
-The literal of the Alternative Dating is Cronologia 2 del bene 0300180068 (the code of the cultural property). 
+<b>1.Triple:</b> <br>
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Subject (Cristo Morto)
+a-cd:hasDating --> Predicate
+<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Object
+The literal of the Object (Alternative Dating) is <i>Cronologia 2 del bene 0300180068</i> (the code of the cultural property). 
 
 After the creation of the new triple and the Alternative Dating page/IRI, we needed to specify the type of Alternative Dating we are introducing. For this purpose, we used LLMS to help us, with a combination of zero-shot and chain of thought prompting technique: 
 
-Q: Andrea Mantegna's artwork "Cristo Morto" has two different possible datings: 1470-1474 ca. or 1483 ca. The alternative date is represented by the following IRI: https://w3id.org/arco/resource/AlternativeDating/0300180068.  The property describing the type of alternative dating is a-cd:hasAlternativeDatingType. The object of the property is a-cd:DifferentDatingType. The 3 possible types are: 1. a-cd:OtherMethodOfDating 2. a-cd:DifferentDating 3. a-cd:ObsoleteDating Which of these 3 object properties is the appropriate one for a triple?
+Q: Andrea Mantegna's artwork "Cristo Morto" has two different possible datings: 1470-1474 ca. or 1483 ca. The alternative date is represented by the following IRI: <https://w3id.org/arco/resource/AlternativeDating/0300180068>. The property describing the type of alternative dating is <i>a-cd:hasAlternativeDatingType</i>. The object of the property is <i>a-cd:DifferentDatingType</i>. The 3 possible types are:
+1. <a href= "https://w3id.org/arco/ontology/context-description/OtherMethodOfDating">a-cd:otherMethodOfDating</a> <br>
+2. <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> <br>
+3. <a href= "https://w3id.org/arco/ontology/context-description/ObsoleteDating">a-cd:obsoleteDating</a> <br>
+Which of these 3 object properties is the appropriate one for a triple?
 A: Let’s think step by step.
 
 CHAT GPT:
@@ -267,20 +271,19 @@ GEMINI:
 
 ![bild6a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/b985eca4-3aed-4775-813c-a8a5a7c2ceeb)
 
-Both ChatGPT and Gemini correctly identified the object of the new triple as “a-cd:differentDating. As a result, we decided to use it as the object of our new triple: 
+Both ChatGPT and Gemini correctly identified the object of the new triple as <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a>. As a result, we decided to use it as the object of our new triple: 
 
-NEW TRIPLE 2
-•	https://w3id.org/arco/resource/AlternativeDating/0300180068  Subject
-•	a-cd:hasAlternativeDatingType  Predicate
-•	a-cd:differentDating  Object
+<b>2.Triple:</b> <br>
+<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject
+a-cd:hasAlternativeDatingType --> Predicate
+<a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> --> Object
 
-The next passage was linking our Alternative Date to the Event of its creation, which would allow us to specify the precise date we wanted to include. We retrieved the property from ArCo’s documentation, among those properties of which Dating is the subject in triples: a-cd:hasDatingEvent. As far as the object is concerned, we continued to use, as a model for its creation, the Dating Event that was already present in relation to the Cristo Morto.
+The next passage was linking our Alternative Date to the Event of its creation, which would allow us to specify the precise date we wanted to include. We retrieved the property from ArCo’s documentation, among those properties of which Dating is the subject in triples: <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a>. As far as the object is concerned, we continued to use, as a model for its creation, the Dating Event that was already present in relation to the Cristo Morto.
 
-NEW TRIPLE 3:
-
-•	https://w3id.org/arco/resource/AlternativeDating/0300180068  Subject
-•	a-cd :hasDatingEvent  Predicate 
-•	https://w3id.org/arco/resource/Event/0300180068-creation-2   Object 
+<b>3.Triple:</b> <br>
+<https://w3id.org/arco/resource/AlternativeDating/0300180068> --> Subject
+<a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate 
+<https://w3id.org/arco/resource/Event/0300180068-creation-2> --> Object 
 The literal of our Dating Event is Realizzazione 2 del bene 0300180068 
 
 At this point, in order to have an idea of which property and object were the most suitable to link our Event to its specific time (1483 ca.), we constructed a general SPARQL query to find the properties and objects related to the Dating Event that already existed in ArCo for the Cristo Morto. More specifically, the query would retrieve all triples where this entity was the subject, which is what we needed:
@@ -298,7 +301,7 @@ WHERE { <br>
 
 From the list presented, we were then able to identify the predicate (a-cd:specificTime) and object ( ti:TimeInterval) we needed for our last triple, although we has to modify the time interval.
 
-NEW TRIPLE 4:
+<b>4.Triple:</b> <br>
 •	https://w3id.org/arco/resource/Event/0300180068-creation-2    Subject
 •	a-cd :specificTime  Predicate
 •	https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483  Object (Literal : ca 1480 - ca 1483). 
