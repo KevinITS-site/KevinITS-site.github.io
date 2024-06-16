@@ -177,7 +177,7 @@ PROPOSITION OF NEW TRIPLES:
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>1.Triple:</b><br>
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Subject <br>
+<https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0300180068.html> --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> --> Predicate <br>
 <https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto> --> Object <br>
 </p>
