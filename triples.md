@@ -1,3 +1,6 @@
+[HOME](index.md)
+[FULL REPORT](another-page.md)
+
 These are the triples we propose to enrich the ArCo knowledge graph:
 
 <a name="mm-anchor"></a>
