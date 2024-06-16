@@ -24,6 +24,9 @@ The goal of our project was to explore the artworks of the Italian Renaissance p
 <a name="target-section"></a>
 <h4 style="color:blue; font-weight: bold">2. Andrea Mantegna</h4>
 
+![mantegna](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/7d9ec8ad-3922-455a-ae2d-66c00e185c20)
+
+
 Exploring ArCo
 
 Our first step is looking for all the cultural properties authored by Andrea Mantegna. However, since we don’t have an IRI for the author yet, we build a query for all the strings whose value contains the words “Andrea Mantegna”:
@@ -45,6 +48,9 @@ Our first step is looking for all the cultural properties authored by Andrea Man
 The first thing we notice from the results of our query is that most of the entities retrieved are of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appears to be one of Mantegna’s famous artworks, which means that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
 ![bild 1](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/00977159-d961-4583-8fa9-cb6a3c210769)
+
+![Bildschirmfoto 2024-06-17 um 01 36 21](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/4a5979e8-a388-4b92-a4b0-08291dcf10b6)
+
 
 Although we are not satisfied with the result, we are keeping this first, preliminary IRI retrieved for the painter: <br>
 <https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b> (prel) <br>
@@ -184,9 +190,9 @@ PROPOSITION OF NEW TRIPLES:
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>2.Triple:</b> <br>
-<https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto> --> Subject <br>
+<a href= "https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto">https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto</a> --> Subject <br> 
 <a href= "https://w3id.org/arco/ontology/context-description/isWorkRelatedTo">a-cd:isWorkRelatedTo</a> --> Predicate <br>
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Object <br>
+<a href="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068</a> --> Object <br>
 </p>
 
 <h2 id="meinsektion"></h2>
