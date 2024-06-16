@@ -40,7 +40,7 @@ We want to identify and explore artworks related to Andrea Mantegna in the ArCo 
 
 Claudia Caterino, Francesca Regina Melgari, Alice Pierassa, Elisa Sadun & Kevin Spirk 
 
-<h3 style="color: blue;">Results</h3>
+<h3 style="color: blue;">Conclusion and Results</h3>
 
 In order to directly discover the RDF triples we propose to enrich the ArCo knowledge graph click [here](triples.md).
 
