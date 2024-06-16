@@ -410,7 +410,7 @@ WHERE { <br>
 Based on the many instances of this property we found in Arco which connect cultural events with the sites that host them, we believe it is also important to introduce a similar triple for our event:
 
 <b>5.Triple:</b> <br>
-<https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.) <br>   
+<https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.)  
 cis:isHostedBySite --> Predicate <br>
 <https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06> --> Object (Literal: Site)
 
