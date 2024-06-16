@@ -427,6 +427,7 @@ cis:isHostedBySite --> Predicate <br>
 
 <div style="margin-top: 80px;"></div> 
 
+<h2 id="meinesektion"></h2>
 <div id="specific-sections"><a name="c-anchor"></a>
 <h4 style="color:blue; font-weight: bold;">4. San Giorgio e il drago, Andrea Mantegna</h4>
 
