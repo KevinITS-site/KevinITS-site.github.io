@@ -4,7 +4,7 @@ layout: default
 
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/0aea0f8e-2834-4747-a4cb-6e68bcf779c8" alt="Camera degli Sposi, Andrea Mantegna" width="630" height="420">
 
-Camera degli Sposi, Andrea Mantegna
+                      Camera degli Sposi, Andrea Mantegna
 
 <h2 style="color: blue;">ABOUT THE PROJECT</h2>
 
