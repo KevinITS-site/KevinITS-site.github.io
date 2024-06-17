@@ -217,16 +217,19 @@ FILTER(REGEX(?label, "cristo morto nel sepolcro e tre dolenti. compianto sul cri
 
 Parallelly, we decided to query the LLMS to help us gather relevant information about the piece of art, with the intention of comparing it with the results of our last query and identifying gaps or incomplete information. 
 
+
+CHATGPT: <br>
 ![bild2a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/6c01961e-32da-4555-9d5f-45f2335e662c)
 
+GEMINI: <br>
 ![bild3a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/3b59f8f8-6e60-4d13-b90d-a70a76be1b17)
 
-By examining all the existing properties and values and comparing it with the information that the LLMS gave us, one of the first things we noticed could be improved was the date of the painting. As illustrated by Gemini (and partially ChatGPT too), the date of the painting is still uncertain, with two possible dates being attributed to it. However, this aspect is not taken into account in ArCo. At this point, our question was: <i>are there any properties or classes in ArCo that allow us to describe the presence of a second/alternative date attributed to a cultural property?</i>
-Our next step was then to check within the <a href= "http://dati.beniculturali.it/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">Context Description ontology of ArCo</a>. Its analysis led us to discover that one of the sub-classes of the class <i>Dating</i> is precisely <i>Alternative dating</i>: 
+By examining all the existing properties and values and comparing them with the information that the LLMS provided us, one of the first things we noticed could be improved was the date of the painting. As illustrated by Gemini (and partially ChatGPT too), the date of the painting is still uncertain, with two possible dates being attributed to it. However, this aspect is not taken into account in ArCo. At this point, our question was: <i>are there any properties or classes in ArCo that allow us to describe the presence of a second/alternative date attributed to a cultural property?</i>
+Our next step was then to check within the <a href= "http://dati.beniculturali.it/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">Context Description ontology of ArCo</a>. Its analysis led us to discover that one of the sub-classes of the class <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/Dating.html">a-cd:Dating</a> is precisely <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/AlternativeDating.html">a-cd:AlternativeDating</a>: 
 
 ![bild4a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/dd02648c-e117-4594-94ac-7ee22827b0ed)
 
-In other words, <i>Alternative dating</i> is a class that further allows to classify the type of Dating by specifying more in detail whether it is an obsolete dating, a different dating, etc. Since we observed that the class Dating is range of the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>, we could infer that Dating is used in triples where it is the object of the property mentioned. We could also infer that, since Alternative Dating is a sub-class of Dating, it inherits all its characteristics and properties, including <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>. This is why we decided to build a SPARQL query to check whether or not there were cultural properties linked to Alternative Dating through the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>:  
+In other words, <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/AlternativeDating.html">a-cd:AlternativeDating</a> is a class that further allows to classify the type of Dating by specifying more in detail whether it is an obsolete dating, a different dating, etc. Since we observed that the class <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/Dating.html">a-cd:Dating</a> is range of the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>, we could infer that <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/Dating.html">a-cd:Dating</a> is used in triples where it is the object of the property mentioned. We could also infer that, since <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/AlternativeDating.html">a-cd:AlternativeDating</a> is a sub-class of Dating, it inherits all its characteristics and properties, including <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>. This is why we decided to build a SPARQL query to check whether or not there were cultural properties linked to <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/AlternativeDating.html">a-cd:AlternativeDating</a> through the property <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a>:  
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -329,7 +332,8 @@ Finally, the last step was the creation of the new page of our Alternative Date,
 
 With all the information and triples gathered, this is the final page of the Alternative Dating of our cultural property: 
 Cronologia 2 del bene 0300180068 <br>
-https://w3id.org/arco/resource/Dating/0300180068-1 ENTITÀ DI TIPO: Dating <br>
+https://w3id.org/arco/resource/Dating/0300180068-1 <br>
+ENTITÀ DI TIPO: Dating <br>
 rdfs:label <br>
 Cronologia 2 del bene 0300180068 / Dating 2 of cultural property 0300180068 <br>
 
@@ -389,15 +393,17 @@ We found two different IRIs, one referring to the Museo Civico of Palazzo Te and
 
 Considering that we were dealing with an event, we opted for the IRI of Palazzo Te, estimating that it indicates the site in a more general sense and could hence produce a wider range of results. To find the right triple, we questioned ChatGPT again, and we also included another LLM, that is, Gemini. This time, we employed a few-shot prompting technique and we asked:
 
-In RDF the sentence Cristo Morto by Mantegna is kept in Pinacoteca di Brera is expressed: 
-Subject: Cristo Morto = https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068  
-Predicate: a-loc:hasCulturalInstituteOrSite 
+In RDF the sentence "Cristo Morto by Mantegna is kept in Pinacoteca di Brera" is expressed: <br>
+Subject: Cristo Morto = https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 <br>
+Predicate: a-loc:hasCulturalInstituteOrSite <br>
 Object: Pinacoteca di Brera = https://w3id.org/arco/resource/CulturalInstituteOrSite/4f94cfc32b33b17e12a1cbe848c08c75   
-And the sentence: Camera degli stucchi, Divinità dell'Olimpo, Corteo militare is kept in Museo Civico Palazzo Te is expressed:
-Subject:https://w3id.org/arco/resource/Lombardia/HistoricOrArtisticProperty/MN020-00071_R03
-Predicate:a-loc:hasCulturalInstituteOrSite
-Object: Museo Civico Palazzo Te: https://dati.beniculturali.it/lodview-arco/resource/Lombardia/CulturalInstituteOrSite/df850573204fac1a1938c8ecbd703b30
-Now considering the previous sentences, can you write me a triple in RDF using the Arco ontology: the event Gonzaga La celeste Galleria was held in Palazzo Te?
+
+And the sentence "Camera degli stucchi, Divinità dell'Olimpo, Corteo militare is kept in Museo Civico Palazzo Te" is expressed:
+Subject:https://w3id.org/arco/resource/Lombardia/HistoricOrArtisticProperty/MN020-00071_R03 <br>
+Predicate:a-loc:hasCulturalInstituteOrSite <br>
+Object: Museo Civico Palazzo Te: https://dati.beniculturali.it/lodview-arco/resource/Lombardia/CulturalInstituteOrSite/df850573204fac1a1938c8ecbd703b30 <br>
+
+Now considering the previous sentences, can you write me a triple in RDF using the Arco ontology: The event "Gonzaga La celeste Galleria" was held in Palazzo Te?
  
 The results were the following: 
 
@@ -407,12 +413,12 @@ GEMINI: <br>
 CHATGPT: <br>
 ![bild11](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/c6ff9d63-3297-440a-a62a-32a874df4e08)
 
-Gemini used the wrong IRI for Palazzo Te. However, we noticed that it understood that the predicate “was held “ is different from “is kept” and tried to guess an appropriate predicate for the sentence: the event Gonzaga La celeste Galleria was held in Palazzo Te by proposing “a-loc:heldAtLocation. On the contrary, ChatGPT is not able to understand that the predicate has to be different and creates a triple with the same predicate: a-loc:hasCulturalInstituteOrsite.
-Now, we needed to verify if the predicate a-loc:heldatLocation was an appropriate property in the ArCo ontology. Exploring the Cultural Events and Exhibitions ontology of ArCo, we could not find the previous predicate. However, we discovered that among the properties related to the class “Cultural Event”, the property “cis:isHostedBySite” is included, and it refers to the site that hosts an event:
+Gemini used the wrong IRI for Palazzo Te. However, we noticed that it understood that the predicate “was held“ is different from “is kept” and tried to guess an appropriate predicate for the sentence "The event Gonzaga La celeste Galleria was held in Palazzo Te" by proposing “a-loc:heldAtLocation. On the contrary, ChatGPT is not able to understand that the predicate has to be different and creates a triple with the same predicate: a-loc:hasCulturalInstituteOrsite.
+Now, we needed to verify if the predicate a-loc:heldatLocation was an appropriate property in the ArCo ontology. Exploring the Cultural Events and Exhibitions ontology of ArCo, we could not find the previous predicate. However, we discovered that among the properties related to the class “Cultural Event”, the property <a href= "http://dati.beniculturali.it/cis/isHostedBySite"> cis:isHostedBySite</a> is included, and it refers to the site that hosts an event:
 
 ![bild12](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/ccacb211-b52b-431e-9174-b29d57436754)
 
-We then checked whether and how the predicate cis:is HostedBySite was employed in ArCo using the following query:
+We then checked whether and how the predicate <a href= "http://dati.beniculturali.it/cis/isHostedBySite"> cis:isHostedBySite</a> was employed in ArCo using the following query:
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX cis: <http://dati.beniculturali.it/cis/> <br>
@@ -426,7 +432,7 @@ Based on the many instances of this property we found in Arco which connect cult
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>5.Triple:</b> <br>
-<https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.)  
+<https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.) <br>
 cis:isHostedBySite --> Predicate <br>
 <https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06> --> Object (Literal: Site)
 </p>
