@@ -514,9 +514,9 @@ As a result, we propose a new triple with the predicate <a href= "https://dati.b
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>1.Triple:</b> <br>
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340> --> Subject <br>
+<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340</a> --> Subject <br>
 <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> --> Predicate <br>
-<https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera> --> Object <br>
+<a href= "https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera">https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera</a> --> Object <br>
 </p>
 
 Since we wanted to be more accurate, we realised it would be better to provide both pieces of information, not only the technique but also the material that is already present. For this reason, we repeated the same procedure. We ran the query: <br>
