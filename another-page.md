@@ -29,7 +29,7 @@ The goal of our project was to explore the artworks of the Italian Renaissance p
 
 Exploring ArCo
 
-Our first step is looking for all the cultural properties authored by Andrea Mantegna. However, since we don’t have an IRI for the author yet, we build a query for all the strings whose value contains the words “Andrea Mantegna”:
+Our first step was looking for all the cultural properties authored by Andrea Mantegna. However, since we didn’t have an IRI for the author yet, we built a query for all the strings whose value contained the words “Andrea Mantegna”:
 
 <p style="background-color: Azure; padding: 5px;">
   PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -45,14 +45,14 @@ Our first step is looking for all the cultural properties authored by Andrea Man
   } <br>
 </p>
 
-The first thing we notice from the results of our query is that most of the entities retrieved are of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appears to be one of Mantegna’s famous artworks, which means that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
+The first thing we noticed from the results of our query was that most of the entities retrieved wer of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appeared to be one of Mantegna’s famous artworks, which meant that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
 ![Bildschirmfoto 2024-06-17 um 01 36 21](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/4a5979e8-a388-4b92-a4b0-08291dcf10b6)
 
 
-Although we are not satisfied with the result, we are keeping this first, preliminary IRI retrieved for the painter: <br>
+Although we were not satisfied with the result, we kept this first, preliminary IRI retrieved for the painter: <br>
 <https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b> (prel) <br>
-At this point, we try to modify the target of our query by making it more specific. This is why we decide to build a query in order to search for one specific famous painting by Mantegna, the "Cristo Morto". We include the full title of the painting in our query, knowing that, since this subject is very popular in the history of art, it could give us too many results. 
+At this point, we tried to modify the target of our query by making it more specific. This is why we decided to build a query in order to search for one specific famous painting by Mantegna, the "Cristo Morto". We included the full title of the painting in our query, knowing that, since this subject is very popular in the history of art, it could give us too many results. 
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -67,11 +67,11 @@ FILTER(REGEX(?l, "cristo morto nel sepolcro e tre dolenti", "i")) <br>
 } <br>
 </p>
   
-This query successfully returns us two results:
+This query successfully returned us two results:
 
 ![bild 2](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/2bc78b9b-7303-4d6a-b691-6572535e49d9)
 
-After querying for the properties and values associated with both entities in the ArCo dataset, and checking the property <a href= "https://w3id.org/arco/ontology/context-description/hasAuthor">cd:hasAuthor</a>, we are able to identify two other IRIs for the author Andrea Mantegna.
+After querying for the properties and values associated with both entities in the ArCo dataset, and checking the property <a href= "https://w3id.org/arco/ontology/context-description/hasAuthor">cd:hasAuthor</a>, we were able to identify two other IRIs for the author Andrea Mantegna.
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -92,7 +92,7 @@ WHERE { <br>
 FIRST IRI: (b) <https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3> <br>
 SECOND IRI: (c) <https://w3id.org/arco/resource/Lombardia/Agent/5fd98076b40717d5f8162f1580228220> 
 
-At first glance, we notice that the main difference between the two lies in the fact that the second IRI includes 'Lombardia’. Therefore, our suspicion is that the second IRI places the Agent Mantegna specifically within the context of the region Lombardy. This could imply that within the ArCo dataset, there is specific attributes related to Mantegna that pertain to Lombardy, such as artworks located in that region. To confirm this hypothesis, we compare the number of cultural properties authored by the first Agent with the number of properties authored by the second one: 
+At first glance, we noticed that the main difference between the two lied in the fact that the second IRI includes 'Lombardia’. Therefore, our suspicion was that the second IRI places the Agent Mantegna specifically within the context of the region Lombardy. This could imply that within the ArCo dataset, there is specific attributes related to Mantegna that pertain to Lombardy, such as artworks located in that region. To confirm this hypothesis, we compared the number of cultural properties authored by the first Agent with the number of properties authored by the second one: 
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
@@ -114,7 +114,7 @@ WHERE { agent:5fd98076b40717d5f8162f1580228220 a-cd:isAuthorOf ?object . <br>
   
 The lower count (n. 7) of cultural properties authored by the second Agent, as compared to the general count (n. 82), confirms that this <a href= "https://w3id.org/arco/resource/Agent/5fd98076b40717d5f8162f1580228220">IRI</a> focuses on a specific, more restricted subset of data related to Mantegna, likely within the regional context of Lombardy. 
 
-Based on these considerations, we decide to focus for our project exclusively on the first agent, as it allows for a more general and richer exploration of the works of art. We therefore run the first SPARQL query of the project again, modifying it with the new information obtained:
+Based on these considerations, we decided to focus for our project exclusively on the first agent, as it allows for a more general and richer exploration of the works of art. We therefore ran the first SPARQL query of the project again, modifying it with the new information obtained:
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> <br>
@@ -130,23 +130,23 @@ a-cd:hasAuthor agent:f006a78cf246d5b7d73539da8eac78e3 <br>
 ORDER BY ASC (?title) <br>
 </p>
   
-As expected, this time the query gives us a many more cultural properties, including Mantegna’s most famous artworks. Moreover, all the cultural properties retrieved belong to the class HistoricorArtisticProperty, and not the previously mentioned class PreparatoryWork:
+As expected, this time the query gave us a many more cultural properties, including Mantegna’s most famous artworks. Moreover, all the cultural properties retrieved belonged to the class HistoricorArtisticProperty, and not the previously mentioned class PreparatoryWork:
 
 ![bild 3](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/b9a32e8a-3442-4487-b3aa-c6e6cf346b30)
 
-This might imply that the very first, <a href= "https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b">preliminary Agent (prel)</a> we have retrieved is the one associated with the preparatory versions of the paintings, while this one is connected to their final, “official” versions. While the first agent is already linked to the second one through <i>owl:sameAs</i>, we could ensure that the second agent is also linked back to the first one, thus specifying that they refer to the same entity. This would make sure that the relationship is bidirectional: 
+This might imply that the very first, <a href= "https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b">preliminary Agent (prel)</a> we have retrieved is the one associated with the preparatory versions of the paintings, while this one is connected to their final, “official” versions. While the first agent was already linked to the second one through <i>owl:sameAs</i>, we could ensure that the second agent was also linked back to the first one, thus specifying that they refer to the same entity. This would make sure that the relationship is bidirectional: 
 
 <https://w3id.org/arco/resource/Agent/12f2edbd230290b2abfb6c867ecef84b> <br>
 owl:sameAs <br>
 <https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3> <br>
 
-Following these considerations, we believe it could also be useful to link the preparatory works to their final versions or vice versa. Our question is: <i>are there any properties in ArCo that define this type of relationship?</i> To answer it, we research in ArCo's Documentation to identify related properties. Such a property might be found in the Context Description module of the ArCo ontology. We find out that, as a matter of fact, this object property already exists:
+Following these considerations, we thought it could also be useful to link the preparatory works to their final versions or vice versa. Our question was: <i>are there any properties in ArCo that define this type of relationship?</i> To answer it, we researched in ArCo's Documentation to identify related properties. Such a property might be found in the Context Description module of the ArCo ontology. We found out that, as a matter of fact, this object property already existed:
 
 <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> <br>
 
 ![bild 4](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/086aeb49-963b-467c-8dc5-3da916db53a3)
 
-To find out if any of the completed artworks authored by Mantegna is linked to the preparatory works through this property, or vice versa, if the preparatory works are related to the completed versions, we use the UNION clause in our query:
+To find out if any of the completed artworks authored by Mantegna is linked to the preparatory works through this property, or vice versa, if the preparatory works are related to the completed versions, we used the UNION clause in our query:
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco:<https://w3id.org/arco/ontology/arco/> <br>
@@ -164,7 +164,7 @@ a-cd:hasAuthor agent:f006a78cf246d5b7d73539da8eac78e3 . <br>
 } <br>
 </p>
   
-Since we obtain no results, we use ASK to test if the property <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> is present at all within the ArCo ontology:
+Since we didn't obtain any results, we used ASK to test if the property <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> is present at all within the ArCo ontology:
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
@@ -175,7 +175,7 @@ ASK <br>
 } <br>
 </p>
   
-The query result is false, indicating that no triple using the <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> property exists within the ArCo KG. This suggests that introducing such triples in the context of Mantegna’s artwork might be relevant for representing these specific relationships between them. As an example, we propose two triples which connect the preparatory work (previously found among the list generated by our first query) whose subject is “Cristo Morto”, with the <a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">final painting</a>.
+The query result was false, indicating that no triple using the <a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> property exists within the ArCo KG. This suggested that introducing such triples in the context of Mantegna’s artwork might be relevant for representing these specific relationships between them. As an example, we proposed two triples which connect the preparatory work (previously found among the list generated by our first query) whose subject is “Cristo Morto”, with the <a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">final painting</a>.
 
 PROPOSITION OF NEW TRIPLES:
 
