@@ -297,7 +297,7 @@ The next passage was linking our Alternative Date to the Event of its creation, 
 <b>3.Triple:</b> <br>
 <a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate <br>
-<a href= "<br>https://w3id.org/arco/resource/Event/0300180068-creation-2"><br>https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Object
+<a href= "<br>https://w3id.org/arco/resource/Event/0300180068-creation-2">https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Object <br>
 The literal of our Dating Event is Realizzazione 2 del bene 0300180068 
 </p>
 
