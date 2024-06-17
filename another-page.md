@@ -92,7 +92,7 @@ WHERE { <br>
 FIRST IRI: (b) <https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3> <br>
 SECOND IRI: (c) <https://w3id.org/arco/resource/Lombardia/Agent/5fd98076b40717d5f8162f1580228220> 
 
-At first glance, we noticed that the main difference between the two lied in the fact that the second IRI includes 'Lombardia’. Therefore, our suspicion was that the second IRI places the Agent Mantegna specifically within the context of the region Lombardy. This could imply that within the ArCo dataset, there is specific attributes related to Mantegna that pertain to Lombardy, such as artworks located in that region. To confirm this hypothesis, we compared the number of cultural properties authored by the first Agent with the number of properties authored by the second one: 
+At first glance, we noticed that the main difference between the two lied in the fact that the second IRI includes 'Lombardia’. Therefore, our suspicion was that the second IRI places the Agent Mantegna specifically within the context of the region Lombardy. This could imply that within the ArCo dataset, there are specific attributes related to Mantegna that pertain to Lombardy, such as artworks located in that region. To confirm this hypothesis, we compared the number of cultural properties authored by the first Agent with the number of properties authored by the second one: 
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> <br>
