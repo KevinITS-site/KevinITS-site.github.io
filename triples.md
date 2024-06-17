@@ -26,7 +26,7 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 <b>1.Triple:</b> <br>
 <a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068</a> --> Subject <br>
 <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a> --> Predicate <br>
-<a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Object <br>
+https://w3id.org/arco/resource/AlternativeDating/0300180068 --> Object <br>
 
 <b>2.Triple:</b> <br>
 <a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Subject <br>
@@ -36,7 +36,7 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 <b>3.Triple:</b> <br>
 <a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate <br>
-<a href= "<br>https://w3id.org/arco/resource/Event/0300180068-creation-2">https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Object <br>
+https://w3id.org/arco/resource/Event/0300180068-creation-2 --> Object <br>
 
 <b>4.Triple:</b> <br>
 <a href= "https://w3id.org/arco/resource/Event/0300180068-creation-2">https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Subject <br>
