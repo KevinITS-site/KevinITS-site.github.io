@@ -20,7 +20,7 @@ Within the "Information Technology Skills" course at the University of Bologna, 
 
 <h3 style="color: blue;">Topic</h3> 
 
-Andrea Mantegna, a Pioneer of Perspective: Discover the _Cristo morto_ and _San Giorgio e il drago_ 
+Andrea Mantegna, a Pioneer of Perspective: Discover the _Cristo Morto_ and _San Giorgio e il drago_ 
 
 Andrea Mantegna, a revolutionary artist who left an indelible mark on the Italian Renaissance, is renowned for his mastery of perspective and engraving. Born in Padua in 1431, Mantegna absorbed classical influences and developped a passion for sculpture. His groundbreaking use of perspective, evident in works like the "Camera degli Sposi" (picture above), created illusions of depth and realism that captivated his contemporaries. Mantegna's artistic genius extended beyond painting - he excelled in engraving, contributing to the dissemination of Renaissance ideals across Europe. This website delves into the world of Andrea Mantegna, exploring his artistic brilliance.
 
