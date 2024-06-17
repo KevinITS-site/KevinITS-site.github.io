@@ -89,8 +89,8 @@ WHERE { <br>
 } <br>
 </p>
 
-FIRST IRI: (b) <https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3> <br>
-SECOND IRI: (c) <https://w3id.org/arco/resource/Lombardia/Agent/5fd98076b40717d5f8162f1580228220> 
+FIRST IRI: (a) <https://w3id.org/arco/resource/Agent/f006a78cf246d5b7d73539da8eac78e3> <br>
+SECOND IRI: (b) <https://w3id.org/arco/resource/Lombardia/Agent/5fd98076b40717d5f8162f1580228220> 
 
 At first glance, we noticed that the main difference between the two lied in the fact that the second IRI includes 'Lombardia’. Therefore, our suspicion was that the second IRI places the Agent Mantegna specifically within the context of the region Lombardy. This could imply that within the ArCo dataset, there are specific attributes related to Mantegna that pertain to Lombardy, such as artworks located in that region. To confirm this hypothesis, we compared the number of cultural properties authored by the first Agent with the number of properties authored by the second one: 
 
@@ -486,7 +486,7 @@ MISTRAL: <br>
 LLAMA: <br>
 <img width="372" alt="Pic 4 12" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/4ff422bc-9e42-456c-91f5-7fbbbe89e867"> <br>
 
-According to ChatGPT, Mistral and Llama the painting technique was a relevant information to add, therefore we wanted to link the “pittura a tempera” property value to the painting. We ran the following query to search the property value “pittura a tempera”. See the results <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fclothing+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
+According to ChatGPT, Mistral and Llama the painting technique was a relevant information to add, therefore we wanted to link the “pittura a tempera” property value to the painting. We ran the following query to search the property value “pittura a tempera”. See the results <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0ASELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fcp+rdfs%3Alabel+%3Flabel%0D%0A++FILTER%28%3Flabel+%3D+%22pittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
@@ -501,7 +501,7 @@ FILTER(?label = "pittura a tempera") <br>
 LIMIT 20 <br>
 </p>
 
-Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
+Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0ASELECT+DISTINCT+%3Fcp+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3FCultureProperty+a-dd%3AhasMaterialOrTechnique+%3Fcp+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22pittura+a+tempera%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
