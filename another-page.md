@@ -445,7 +445,8 @@ Based on the many instances of this property we found in Arco which connect cult
 
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/d01348ce-db11-43ad-a775-2c9b5a9fb82b" width="250" height="400"> <br>
 
-Among the list of all artworks authored by Mantegna, we also noticed that the painting https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0500402340.html presented partial information about the following property:
+
+Among the list of all artworks authored by Mantegna, we also noticed that <a href= "https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0500402340.html">the painting "San Giorgio e il drago"</a> presented partial information about the following property:
 
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/08cf355d-0e50-40b9-8d7d-969085f72802"> <br>
 
