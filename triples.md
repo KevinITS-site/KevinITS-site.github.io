@@ -3,6 +3,8 @@
 
 <h3 style="color:blue; font-size: 2em;">CONCLUSION AND RESULTS</h3>
 
+To sum up we can remark that LLMs have proven to be powerful instruments, even though they must be properly instructed and sometimes even corrected in order to obtain the required information. Furthermore, the fact that several Classes and Properties existing in the ArCo Ontology are not actually used makes it difficult to understand how to use them and to create triples.
+
 These are the triples we propose to enrich the ArCo knowledge graph:
 
 <a name="mm-anchor"></a>
