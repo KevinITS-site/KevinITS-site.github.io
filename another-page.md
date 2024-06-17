@@ -271,7 +271,7 @@ The literal of the Object (Alternative Dating) is <i>Cronologia 2 del bene 03001
   
 After the creation of the new triple and the Alternative Dating page/IRI, we needed to specify the type of Alternative Dating we are introducing. For this purpose, we used LLMS to help us, with a combination of zero-shot and chain of thought prompting technique: 
 
-Q: Andrea Mantegna's artwork "Cristo Morto" has two different possible datings: 1470-1474 ca. or 1483 ca. The alternative date is represented by the following IRI: <https://w3id.org/arco/resource/AlternativeDating/0300180068>. <br> 
+Q: Andrea Mantegna's artwork "Cristo Morto" has two different possible datings: 1470-1474 ca. or 1483 ca. The alternative date is represented by the following IRI: https://w3id.org/arco/resource/AlternativeDating/0300180068. <br> 
 The property describing the type of alternative dating is <i>a-cd:hasAlternativeDatingType</i>. The object of the property is <i>a-cd:DifferentDatingType</i>. The 3 possible types are:
 1. <a href= "https://w3id.org/arco/ontology/context-description/OtherMethodOfDating">a-cd:otherMethodOfDating</a> <br>
 2. <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> <br>
