@@ -47,8 +47,6 @@ Our first step is looking for all the cultural properties authored by Andrea Man
 
 The first thing we notice from the results of our query is that most of the entities retrieved are of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appears to be one of Mantegna’s famous artworks, which means that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
-![bild 1](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/00977159-d961-4583-8fa9-cb6a3c210769)
-
 ![Bildschirmfoto 2024-06-17 um 01 36 21](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/4a5979e8-a388-4b92-a4b0-08291dcf10b6)
 
 
@@ -411,7 +409,8 @@ GEMINI: <br>
 ![bild10](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/7acfcf88-8d7e-4243-ab27-df89298bd6e8)
 
 CHATGPT: <br>
-![bild11](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/c6ff9d63-3297-440a-a62a-32a874df4e08)
+![bild11](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/62688fc0-be2d-4b29-97b7-89288ea873f6)
+
 
 Gemini used the wrong IRI for Palazzo Te. However, we noticed that it understood that the predicate “was held“ is different from “is kept” and tried to guess an appropriate predicate for the sentence "The event Gonzaga La celeste Galleria was held in Palazzo Te" by proposing “a-loc:heldAtLocation. On the contrary, ChatGPT is not able to understand that the predicate has to be different and creates a triple with the same predicate: a-loc:hasCulturalInstituteOrsite.
 Now, we needed to verify if the predicate a-loc:heldatLocation was an appropriate property in the ArCo ontology. Exploring the Cultural Events and Exhibitions ontology of ArCo, we could not find the previous predicate. However, we discovered that among the properties related to the class “Cultural Event”, the property <a href= "http://dati.beniculturali.it/cis/isHostedBySite"> cis:isHostedBySite</a> is included, and it refers to the site that hosts an event:
@@ -445,7 +444,7 @@ Based on the many instances of this property we found in Arco which connect cult
 
 Among the list of all artworks authored by Mantegna, we also noticed that the painting https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0500402340.html presented partial information about the following property:
 
-<img width="778" alt="Pic 4 1" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/08cf355d-0e50-40b9-8d7d-969085f72802"> <br>
+<img width="300" height:500 src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/08cf355d-0e50-40b9-8d7d-969085f72802"> <br>
 
 In this instance we only knew the material that was used. We were thus curious to know more about the technique; therefore we have verified it with the support of the LLMs.
 Firstly, we used the zero-shot prompting technique: <br>
