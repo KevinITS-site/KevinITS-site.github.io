@@ -45,7 +45,7 @@ Our first step was looking for all the cultural properties authored by Andrea Ma
   } <br>
 </p>
 
-The first thing we noticed from the results of our query was that most of the entities retrieved wer of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appeared to be one of Mantegna’s famous artworks, which meant that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
+The first thing we noticed from the results of our query was that most of the entities retrieved were of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appeared to be one of Mantegna’s famous artworks, which meant that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
 ![Bildschirmfoto 2024-06-17 um 01 36 21](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/4a5979e8-a388-4b92-a4b0-08291dcf10b6)
 
@@ -193,11 +193,13 @@ PROPOSITION OF NEW TRIPLES:
 <a href="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068</a> --> Object <br>
 </p>
 
+Following this preliminary phase, we have decided to focus more specifically on two of his paintings that appeared in need of further enrichment. Consequently, the next two sections will be devoted to the methodology, results and analysis of “Cristo Morto” and “San Giorgio e il drago”.
+
 <h2 id="meinsektion"></h2>
 <div id="specific-section"><a name="custom-anchor"></a>
 <h4 style="color:blue ; font-weight: bold">3. Cristo Morto, Andrea Mantegna</h4></div>
 
-Following this preliminary phase, we have decided to focus more specifically on two of his paintings that appeared in need of further enrichment. Consequently, the next two sections will be devoted to the methodology, results and analysis of “Cristo Morto” and “San Giorgio e il drago”.
+Since, from our previous query, we already knew that there was an entity in ArCo representing this artwork, our first step was identifying what ArCo already held about this specific entity. In order to do so, we checked what properties/values were associated with it by means of the following query:
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX arco: <https://w3id.org/arco/ontology/arco/> <br>
