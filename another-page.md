@@ -443,7 +443,7 @@ Based on the many instances of this property we found in Arco which connect cult
 <div id="specific-sections"><a name="c-anchor"></a>
 <h4 style="color:blue; font-weight: bold;">4. San Giorgio e il drago, Andrea Mantegna</h4>
 
-<img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/d01348ce-db11-43ad-a775-2c9b5a9fb82b" width="250" height="400">
+<img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/d01348ce-db11-43ad-a775-2c9b5a9fb82b" width="250" height="400"> <br>
 
 Among the list of all artworks authored by Mantegna, we also noticed that the painting https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0500402340.html presented partial information about the following property:
 
@@ -460,7 +460,7 @@ MISTRAL: <br>
 <img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/b7c70205-6a0e-40ea-a2b5-2eafd4cb5c11"> <br>
 
 LLAMA: <br>
-<img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/e4f6193a-e30e-4e57-95dc-bc5cc63d3406"> <br>
+<img src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/e4f6193a-e30e-4e57-95dc-bc5cc63d3406" height="730" width="480"> <br>
 
 Even if we asked what the painting technique is, they all answered adding other information, for example about the panel preparation, the layering, the chiaroscuro and the use of perspective. The only LLM that has replied properly is ChatGPT. On the other hand, Mistral wrongly affirms that it was made in oil, so we decide to correct it: <br>
 <img width="383" alt="Pic 4 6" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/b70126ce-4413-4906-a8e3-56b03682833e"> <br>
