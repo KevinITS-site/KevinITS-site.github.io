@@ -328,8 +328,9 @@ Finally, the last step was the creation of the new page of our Alternative Date,
 
 ![bild8](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/5fff03d8-1cb6-40f2-905a-e9bc67d99e88)
 
-With all the information and triples gathered, this is the final page of the Alternative Dating of our cultural property: 
+With all the information and triples gathered, this is the final page of the Alternative Dating of our cultural property: <br>
 Cronologia 2 del bene 0300180068 <br>
+
 https://w3id.org/arco/resource/Dating/0300180068-1 <br>
 ENTITÀ DI TIPO: Dating <br>
 rdfs:label <br>
