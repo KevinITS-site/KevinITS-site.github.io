@@ -199,7 +199,7 @@ Following this preliminary phase, we have decided to focus more specifically on 
 <div id="specific-section"><a name="custom-anchor"></a>
 <h4 style="color:blue ; font-weight: bold">3. Cristo Morto, Andrea Mantegna</h4></div>
 
-<img scr=https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/cea57981-7db9-442a-8a59-8e64b913f4c3 height="450" width="700">
+<img scr="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/cea57981-7db9-442a-8a59-8e64b913f4c3" height="450" width="700"> <br>
 
 Since, from our previous query, we already knew that there was an entity in ArCo representing this artwork, our first step was identifying what ArCo already held about this specific entity. In order to do so, we checked what properties/values were associated with it by means of the following query:
 
