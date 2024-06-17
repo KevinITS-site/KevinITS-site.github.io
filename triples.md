@@ -22,7 +22,7 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 <h3 style="color:blue ;">Cristo morto</h3>
 
 <b>1.Triple:</b> <br>
-<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068</a> --> Subject (Cristo Morto) <br>
+<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068</a> --> Subject <br>
 <a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a> --> Predicate <br>
 <a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Object <br>
 
@@ -39,10 +39,10 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 <b>4.Triple:</b> <br>
 <a href= "https://w3id.org/arco/resource/Event/0300180068-creation-2">https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Subject <br>
 <a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a> --> Predicate <br>
-<a href= "https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483">https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483</a> --> Object (Literal : ca 1480 - ca 1483). <br>
+<a href= "https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483">https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483</a> --> Object <br>
 
 <b>5.Triple:</b> <br>
-<a href= "https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e">https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e</a> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.) <br>
+<a href= "https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e">https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e</a> --> Subject <br>
 <a href= "http://dati.beniculturali.it/cis/isHostedBySite">cis:isHostedBySite</a> --> Predicate <br>
 <a href= "https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06">https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06</a> --> Object
 
