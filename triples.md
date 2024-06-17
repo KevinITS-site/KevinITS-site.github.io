@@ -8,43 +8,56 @@ These are the triples we propose to enrich the ArCo knowledge graph:
 <a name="mm-anchor"></a>
 <h3 style="color:blue ;">Andrea Mantegna</h3>
 
-<strong> 1. Triple ???</strong>
+<b>1.Triple:</b><br>
+<a href="https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0300180068.html">https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0300180068.html</a> --> Subject <br>
+<a href= "https://w3id.org/arco/ontology/context-description/hasRelatedWork">a-cd:hasRelatedWork</a> --> Predicate <br>
+<a href="https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto">https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto</a> --> Object <br>
 
-<https://w3id.org/arco/resource/Lombardia/Agent/5fd98076b40717d5f8162f1580228220> --> Subject <br>
-a-cd:isAuthorOf --> Predicate <br>
-<https://w3id.org/arco/ontology/context-description/PreparatoryWork> --> Object
-
-<strong> 1. Triple</strong>
-
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068> --> Subject 
-a-cd:hasRelatedWork --> Predicate 
-<https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto> --> Object
-
-<strong> 2. Triple</strong>
-
-https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto --> Subject 
-a-cd:isRelatedWork --> Predicate 
-https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 --> Object 
+<b>2.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto">https://w3id.org/arco/resource/PreparatoryWork/0300182725-dipinto</a> --> Subject <br> 
+<a href= "https://w3id.org/arco/ontology/context-description/isWorkRelatedTo">a-cd:isWorkRelatedTo</a> --> Predicate <br>
+<a href="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068</a> --> Object <br>
 
 <a name="mm-anchor"></a>
 <h3 style="color:blue ;">Cristo morto</h3>
 
-<strong> 1. Triple </strong>
+<b>1.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068</a> --> Subject (Cristo Morto) <br>
+<a href= "https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/hasDating.html">a-cd:hasDating</a> --> Predicate <br>
+<a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Object <br>
 
-<strong> 2. Triple </strong>
+<b>2.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Subject <br>
+<a href= "https://w3id.org/arco/ontology/context-description/hasAlternativeDatingType">a-cd:hasAlternativeDatingType</a> --> Predicate <br>
+<a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> --> Object <br>
 
-<strong> 3. Triple </strong>
+<b>3.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Subject <br>
+<a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate <br>
+<a href= "<br>https://w3id.org/arco/resource/Event/0300180068-creation-2">https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Object <br>
 
-<strong> 4. Triple </strong>
+<b>4.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/Event/0300180068-creation-2">https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Subject <br>
+<a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a> --> Predicate <br>
+<a href= "https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483">https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483</a> --> Object (Literal : ca 1480 - ca 1483). <br>
 
-<strong> 5. Triple </strong>
-
+<b>5.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e">https://w3id.org/arco/resource/CulturalEvent/a5cc0077c01891152d8d380f41ebed0e</a> --> Subject (Literal: CulturalEvent: Gonzaga. La Celeste Galleria.) <br>
+<a href= "http://dati.beniculturali.it/cis/isHostedBySite">cis:isHostedBySite</a> --> Predicate <br>
+<a href= "https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06">https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06</a> --> Object
 
 <a name="mm-anchor"></a>
 <h3 style="color:blue ;">San Giorgio e il drago</h3>
 
-<strong> 1. Triple </strong>
+<b>1.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340</a> --> Subject <br>
+<a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> --> Predicate <br>
+<a href= "https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera">https://w3id.org/arco/resource/TechnicalCharacteristic/pittura-a-tempera</a> --> Object <br>
 
+<b>2.Triple:</b> <br>
+<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340</a> --> Subject <br>
+<a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> --> Predicate <br>
+<a href= "https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera">https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera</a> --> Object <br>
 
 [HOME](index.md)
 [FULL REPORT](another-page.md)
