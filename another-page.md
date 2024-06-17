@@ -290,7 +290,7 @@ Both ChatGPT and Gemini correctly identified the object of the new triple as <a 
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>2.Triple:</b> <br>
-<a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Subject <br>
+https://w3id.org/arco/resource/AlternativeDating/0300180068 --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasAlternativeDatingType">a-cd:hasAlternativeDatingType</a> --> Predicate <br>
 <a href= "https://w3id.org/arco/ontology/context-description/DifferentDating">a-cd:differentDating</a> --> Object <br>
 </p>
