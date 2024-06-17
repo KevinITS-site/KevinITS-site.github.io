@@ -437,18 +437,16 @@ cis:isHostedBySite --> Predicate <br>
 <https://w3id.org/arco/resource/Lombardia/Site/88bbeb320f82f33c71368ac984b74f06> --> Object (Literal: Site)
 </p>
 
-<div style="margin-top: 80px;"></div> 
+<div style="margin-top: 30px;"></div> 
 
 <h2 id="meinesektion"></h2>
 <div id="specific-sections"><a name="c-anchor"></a>
 <h4 style="color:blue; font-weight: bold;">4. San Giorgio e il drago, Andrea Mantegna</h4>
 
-<div style= "text-align: center;">
-<img src="![Accademia_-_San_Giorgio_di_Andrea_Mantegna_Cat 588](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/b23522f6-19f6-4316-b156-e960a59df3be)
-" width="200" height="400">
-</div>
 Among the list of all artworks authored by Mantegna, we also noticed that the painting https://dati.beniculturali.it/lodview-arco/resource/HistoricOrArtisticProperty/0500402340.html presented partial information about the following property:
+
 <img width="778" alt="Pic 4 1" src="https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172398909/08cf355d-0e50-40b9-8d7d-969085f72802"> <br>
+
 In this instance we only knew the material that was used. We were thus curious to know more about the technique; therefore we have verified it with the support of the LLMs.
 Firstly, we used the zero-shot prompting technique: <br>
 
@@ -495,7 +493,7 @@ FILTER(?label = "pittura a tempera") <br>
 LIMIT 20 <br>
 </p>
 
-Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the a-dd:MaterialOrTechnique predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
+Once we found the property value “pittura a tempera”, we browsed the Denotative Description Ontology and found the <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> predicate, which looked suitable for our work. We then ran this query to make sure that the predicate is associated with the property value. See results of the query <a href= "https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-dd%3A%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fc+%3Flabel+%0D%0AWHERE+%7B+%0D%0A%3Fclothing+a-dd%3AhasMaterialOrTechnique+%3Fc+.%0D%0A%3Fc+rdfs%3Alabel+%3Flabel+%0D%0AFILTER%28%3Flabel+%3D+%22paillettes%22%29%0D%0A%7D%0D%0ALIMIT+20%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on">here</a>. <br>
 
 <p style="background-color: Azure; padding: 5px;">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <br>
@@ -557,9 +555,9 @@ Finally, here is the complete triple: <br>
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>2.Triple:</b> <br>
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340> --> Subject <br>
+<a href= "https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340">https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500402340</a> --> Subject <br>
 <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> --> Predicate <br>
-<https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera> --> Object <br>
+<a href= "https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera">https://w3id.org/arco/resource/TechnicalCharacteristic/tavola-pittura-a-tempera</a> --> Object <br>
 </p>
 
 <div class="topnav">
