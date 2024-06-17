@@ -45,7 +45,7 @@ Our first step was looking for all the cultural properties authored by Andrea Ma
   } <br>
 </p>
 
-The first thing we noticed from the results of our query was that most of the entities retrieved were of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">PreparatoryWork</a>. Moreover, none of these cultural properties appeared to be one of Mantegna’s famous artworks, which meant that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
+The first thing we noticed from the results of our query was that most of the entities retrieved were of class <a href= "https://w3id.org/arco/ontology/context-description/PreparatoryWork">a-cd:PreparatoryWork</a>. Moreover, none of these cultural properties appeared to be one of Mantegna’s famous artworks, which meant that these works are either not present or they exist but are associated to an alternative agent whose name is slightly different:
 
 ![Bildschirmfoto 2024-06-17 um 01 36 21](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/4a5979e8-a388-4b92-a4b0-08291dcf10b6)
 
@@ -227,7 +227,7 @@ CHATGPT: <br>
 GEMINI: <br>
 ![bild3a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/3b59f8f8-6e60-4d13-b90d-a70a76be1b17)
 
-By examining all the existing properties and values and comparing them with the information that the LLMS provided us, one of the first things we noticed could be improved was the date of the painting. As illustrated by Gemini (and partially ChatGPT too), the date of the painting is still uncertain, with two possible dates being attributed to it. However, this aspect is not taken into account in ArCo. At this point, our question was: <i>are there any properties or classes in ArCo that allow us to describe the presence of a second/alternative date attributed to a cultural property?</i>
+By examining all the existing properties and values and comparing them with the information that the LLMS provided us, one of the first things we noticed could be improved was the date of the painting. As illustrated by Gemini (and partially ChatGPT too), the date of the painting is still uncertain, with two possible dates being attributed to it. However, this aspect is not taken into account in ArCo. At this point, our question was: <i>Are there any properties or classes in ArCo that allow us to describe the presence of a second/alternative date attributed to a cultural property?</i>
 Our next step was then to check within the <a href= "http://dati.beniculturali.it/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">Context Description ontology of ArCo</a>. Its analysis led us to discover that one of the sub-classes of the class <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/Dating.html">a-cd:Dating</a> is precisely <a href="https://dati.beniculturali.it/lodview-arco-onto/ontology/context-description/AlternativeDating.html">a-cd:AlternativeDating</a>: 
 
 ![bild4a](https://github.com/KevinITS-site/KevinITS-site.github.io/assets/172382434/dd02648c-e117-4594-94ac-7ee22827b0ed)
@@ -351,7 +351,7 @@ a-cd:hasAlternativeDatingType <br>
 a-cd:DifferentDating <br>
 
 a-cd:hasDatingEvent <br>
-<https://w3id.org/arco/resource/Event/0300180068-creation-2> <br>
+https://w3id.org/arco/resource/Event/0300180068-creation-2 <br>
 Realizzazione 2 del bene 0300180068 <br>
 
 
@@ -397,7 +397,7 @@ We found two different IRIs, one referring to the Museo Civico of Palazzo Te and
 
 Considering that we were dealing with an event, we opted for the IRI of Palazzo Te, estimating that it indicates the site in a more general sense and could hence produce a wider range of results. To find the right triple, we questioned ChatGPT again, and we also included another LLM, that is, Gemini. This time, we employed a few-shot prompting technique and we asked:
 
-In RDF the sentence "Cristo Morto by Mantegna is kept in Pinacoteca di Brera" is expressed: <br>
+"In RDF the sentence "Cristo Morto by Mantegna is kept in Pinacoteca di Brera" is expressed: <br>
 Subject: Cristo Morto = https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300180068 <br>
 Predicate: a-loc:hasCulturalInstituteOrSite <br>
 Object: Pinacoteca di Brera = https://w3id.org/arco/resource/CulturalInstituteOrSite/4f94cfc32b33b17e12a1cbe848c08c75   
@@ -407,7 +407,7 @@ Subject:https://w3id.org/arco/resource/Lombardia/HistoricOrArtisticProperty/MN02
 Predicate:a-loc:hasCulturalInstituteOrSite <br>
 Object: Museo Civico Palazzo Te: https://dati.beniculturali.it/lodview-arco/resource/Lombardia/CulturalInstituteOrSite/df850573204fac1a1938c8ecbd703b30 <br>
 
-Now considering the previous sentences, can you write me a triple in RDF using the Arco ontology: The event "Gonzaga La celeste Galleria" was held in Palazzo Te?
+Now considering the previous sentences, can you write me a triple in RDF using the Arco ontology: The event "Gonzaga La celeste Galleria" was held in Palazzo Te?"
  
 The results were the following: 
 
