@@ -299,7 +299,7 @@ The next passage was linking our Alternative Date to the Event of its creation, 
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>3.Triple:</b> <br>
-<a href= "https://w3id.org/arco/resource/AlternativeDating/0300180068">https://w3id.org/arco/resource/AlternativeDating/0300180068</a> --> Subject <br>
+https://w3id.org/arco/resource/AlternativeDating/0300180068 --> Subject <br>
 <a href= "https://w3id.org/arco/ontology/context-description/hasDatingEvent">a-cd:hasDatingEvent</a> --> Predicate <br>
 https://w3id.org/arco/resource/Event/0300180068-creation-2 --> Object <br>
 The literal of our Dating Event is Realizzazione 2 del bene 0300180068 
@@ -322,7 +322,7 @@ From the list presented, we were then able to identify the predicate (<a href="h
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>4.Triple:</b> <br>
-<a href= "https://w3id.org/arco/resource/Event/0300180068-creation-2">https://w3id.org/arco/resource/Event/0300180068-creation-2</a> --> Subject <br>
+https://w3id.org/arco/resource/Event/0300180068-creation-2 --> Subject <br>
 <a href="https://w3id.org/arco/ontology/context-description/specificTime">a-cd:specificTime</a> --> Predicate <br>
 <a href= "https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483">https://w3id.org/arco/resource/TimeInterval/ca-1480-ca-1483</a> --> Object (Literal : ca 1480 - ca 1483). <br> 
 Since a time interval is apparently the only possibility, we included a slightly larger span of time, from 1480 to 1483. 
