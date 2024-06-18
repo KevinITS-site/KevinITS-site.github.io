@@ -518,7 +518,7 @@ FILTER(?label = "pittura a tempera") <br>
 LIMIT 20 <br>
 </p>
 
-As a result, we propose a new triple with the predicate <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> and the property value “pittura a tempera”, which comprehends both the material and the technique. <br>
+As a result, we propose a new triple with the predicate <a href= "https://dati.beniculturali.it/lodview-arco/ontology/denotative-description/hasMaterialOrTechnique.html">a-dd:hasMaterialOrTechnique</a> and the property value “pittura a tempera”. <br>
 
 <p style="background-color: LavenderBlush; padding: 5px;">
 <b>1.Triple:</b> <br>
